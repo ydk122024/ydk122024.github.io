@@ -69,605 +69,333 @@
     <a name="publications">
     <div class="headline">Publications</div>
 
-      <!-- publication -->
-      <div class="publication">
+    <!-- publication -->
+    <div class="publication">
         <div class="pubimg"><img src="publications/img/FDMER.png" class="thumbnail"></div>
         <div class="pubtext">
             <div class="pubtitle">Disentangled Representation Learning for Multimodal Emotion
                 Recognition</div>
-            <div class="pubauthors"><b>Dingkang Yang</b>, Shuang Huang, Haopeng Kuang, Yangtao Du, Lihua Zhang*</div>
+            <div class="pubauthors"><b>Dingkang Yang</b>, Shuai Huang, Haopeng Kuang, Yangtao Du, Lihua Zhang*</div>
             <div class="pubinfo">ACM International Conference on Multimedia (ACM-MM 2022)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
             <div class="pubbox"><a href="publications/pdf/FDMER.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Photorealistic avatars of human faces have come a long way in recent years, yet research along this area is limited by a lack of publicly available, high-quality datasets covering both, dense multi-view camera captures, and rich facial expressions of the captured subjects. In this work, we present Multiface, a new multi-view, high-resolution human face dataset collected from 13 identities at Reality Labs Research for neural face rendering. We introduce Mugsy, a large scale multi-camera apparatus to capture high-resolution synchronized videos of a facial performance. The goal of Multiface is to close the gap in accessibility to high quality data in the academic community and to enable research in VR telepresence. Along with the release of the dataset, we conduct ablation studies on the influence of different model architectures toward the model's interpolation capacity of novel viewpoint and expressions. With a conditional VAE model serving as our baseline, we found that adding spatial bias, texture warp field, and residual connections improves performance on novel view synthesis. Our code and data is available at https://github.com/facebookresearch/multiface.</div>
-            <div class="bibtex">
-                <!-- @inproceedings{wuu2022multiface,
-  title={Multiface: A Dataset for Neural Face Rendering},
-  author = {Wuu, Cheng-hsin and Zheng, Ningyuan and Ardisson, Scott and Bali, Rohan and Belko, Danielle and Brockmeyer, Eric and Evans, Lucas and Godisart, Timothy and Ha, Hyowon and Hypes, Alexander and Koska, Taylor and Krenn, Steven and Lombardi, Stephen and Luo, Xiaomin and McPhail, Kevyn and Millerschoen, Laura and Perdoch, Michal and Pitts, Mark and Richard, Alexander and Saragih, Jason and Saragih, Junko and Shiratori, Takaaki and Simon, Tomas and Stewart, Matt and Trimble, Autumn and Weng, Xinshuo and Whitewolf, David and Wu, Chenglei and Yu, Shoou-I and Sheikh, Yaser},
-  booktitle={arXiv},
-  year={2022},
-  doi = {10.48550/ARXIV.2207.11243},
-  url = {https://arxiv.org/abs/2207.11243} -->
-}</div>
+            <div class="abstract">Multimodal emotion recognition aims to identify human emotions from text, audio, and visual  modalities.
+                Previous methods either explore correlations between different modalities or design sophisticated fusion strategies. However, the serious problem is that the distribution gap and information 
+                redundancy often exist across heterogeneous modalities, resulting in learned multimodal representations that may be unrefined.
+                Motivated by these observations, we propose a Feature-Disentangled Multimodal Emotion Recognition (FDMER) method, which learns the common and private feature representations for each modality.
+                Specifically, we design the common and private encoders to project each modality into modality-invariant and modality-specific subspaces, respectively.
+                The modality-invariant subspace aims to explore the commonality among different modalities and reduce the distribution gap sufficiently.
+                The modality-specific subspaces attempt to enhance the diversity and capture the unique characteristics of each modality.
+                After that, a modality discriminator is introduced to guide the parameter learning of the common and private encoders in an adversarial manner.
+                We achieve the modality consistency and disparity constraints by designing tailored losses for the above subspaces.
+                Furthermore, we present a cross-modal attention fusion module to learn adaptive weights for obtaining effective multimodal representations. The final representation is used for different downstream tasks.
+                Experimental results show that the FDMER outperforms the state-of-the-art methods on two multimodal emotion recognition benchmarks. 
+                Moreover, we further verify the effectiveness of our model via experiments on the multimodal humor detection task.</div>
+            <div class="bibtex"> </div>
+        </div>
+    </div>
+
+   <!-- publication -->
+   <div class="publication">
+        <div class="pubimg"><img src="publications/img/MFSA.png" class="thumbnail"></div>
+        <div class="pubtext">
+            <div class="pubtitle">Learning Modality-Specific and -Agnostic Representations for Asynchronous Multimodal Language Sequences</div>
+            <div class="pubauthors"><b>Dingkang Yang</b>,  Haopeng Kuang, Shuai Huang, Lihua Zhang*</div>
+            <div class="pubinfo">ACM International Conference on Multimedia (ACM-MM 2022)</div>
+            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
+            <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
+            <div class="pubbox"><a href="publications/pdf/MFSA.pdf">PDF</a></div>
+            <div class="pubbox"><a href="publications/pdf/MFSA_Supp.pdf">Supp</a></div>
+            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
+            <div class="abstract">Understanding human behaviors and intents from videos is a challenging task. Video flows usually involve time-series data from different modalities, such as natural language, facial gestures, and acoustic information.
+                Due to the variable receiving frequency for sequences from each modality, the collected multimodal streams are usually unaligned.
+                For multimodal fusion of asynchronous sequences, the existing methods focus on projecting multiple modalities into a common latent space and learning the hybrid representations, which neglects the diversity of each modality and the commonality across different modalities.
+                Motivated by this observation, we propose a Multimodal Fusion approach for learning modality-Specific and modality-Agnostic representations (MFSA) to refine multimodal representations and leverage the complementarity across different modalities.
+                Specifically, a predictive self-attention module is used to capture reliable contextual dependencies and enhance the unique features over the modality-specific spaces. 
+                Meanwhile, we propose a hierarchical cross-modal attention module to explore the correlations between cross-modal elements over the modality-agnostic space.
+                In this case, a double-discriminator strategy is presented to ensure the production of distinct representations in an adversarial manner.
+                Eventually, the modality-specific and -agnostic multimodal representations are used together for downstream tasks.
+                Comprehensive experiments on three multimodal datasets clearly demonstrate the superiority of our approach.</div>
+            <div class="bibtex"> </div>
         </div>
     </div>
 
     <!-- publication -->
     <div class="publication">
-        <div class="pubimg"><img src="publications/img/wuu2022multiface.png" class="thumbnail"></div>
+        <div class="pubimg"><img src="publications/img/ECCV.png" class="thumbnail"></div>
         <div class="pubtext">
-            <div class="pubtitle">Multiface: A Dataset for Neural Face Rendering</div>
-            <div class="pubauthors">Cheng-hsin Wuu, Ningyuan Zheng, ..., <b>Alexander Richard</b>, ..., Yaser Sheikh (30 authors)</div>
-            <div class="pubinfo">Technical Report, arXiv, 2022</div>
+            <div class="pubtitle">Emotion Recognition for Multiple Context Awareness</div>
+            <div class="pubauthors"> <u><b>Dingkang Yang</b></u>, <u>Shuai Huang</u>, Shunli Wang, ..., Lihua Zhang*</div>
+            <div class="pubinfo">European Conference on Computer Vision (ECCV 2022)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div>
-            <div class="pubbox"><a href="https://arxiv.org/abs/2207.11243">pdf</a></div>
+            <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
+            <div class="pubbox"><a href="publications/pdf/ECCV.pdf">PDF</a></div>
+            <div class="pubbox"><a href="publications/pdf/ECCV_Supp.pdf">Supp</a></div>
+            <div class="pubbox"><a href=https://heco2022.github.io>Project</a></div>
+            <div class="pubbox"><a href=https://drive.google.com/drive/folders/1js1UoaAeagrHZ5eizInw5ZaWLJurKW-D>Data</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Photorealistic avatars of human faces have come a long way in recent years, yet research along this area is limited by a lack of publicly available, high-quality datasets covering both, dense multi-view camera captures, and rich facial expressions of the captured subjects. In this work, we present Multiface, a new multi-view, high-resolution human face dataset collected from 13 identities at Reality Labs Research for neural face rendering. We introduce Mugsy, a large scale multi-camera apparatus to capture high-resolution synchronized videos of a facial performance. The goal of Multiface is to close the gap in accessibility to high quality data in the academic community and to enable research in VR telepresence. Along with the release of the dataset, we conduct ablation studies on the influence of different model architectures toward the model's interpolation capacity of novel viewpoint and expressions. With a conditional VAE model serving as our baseline, we found that adding spatial bias, texture warp field, and residual connections improves performance on novel view synthesis. Our code and data is available at https://github.com/facebookresearch/multiface.</div>
-            <div class="bibtex">@inproceedings{wuu2022multiface,
-  title={Multiface: A Dataset for Neural Face Rendering},
-  author = {Wuu, Cheng-hsin and Zheng, Ningyuan and Ardisson, Scott and Bali, Rohan and Belko, Danielle and Brockmeyer, Eric and Evans, Lucas and Godisart, Timothy and Ha, Hyowon and Hypes, Alexander and Koska, Taylor and Krenn, Steven and Lombardi, Stephen and Luo, Xiaomin and McPhail, Kevyn and Millerschoen, Laura and Perdoch, Michal and Pitts, Mark and Richard, Alexander and Saragih, Jason and Saragih, Junko and Shiratori, Takaaki and Simon, Tomas and Stewart, Matt and Trimble, Autumn and Weng, Xinshuo and Whitewolf, David and Wu, Chenglei and Yu, Shoou-I and Sheikh, Yaser},
-  booktitle={arXiv},
-  year={2022},
-  doi = {10.48550/ARXIV.2207.11243},
-  url = {https://arxiv.org/abs/2207.11243}
-}</div>
+            <div class="abstract">Understanding emotion in context is a rising hotspot in the
+                computer vision community. Existing methods lack reliable context semantics to mitigate uncertainty in expressing emotions and fail to model
+                multiple context representations complementarily. To alleviate these issues, we present a context-aware emotion recognition framework that
+                combines four complementary contexts. The first context is multimodal
+                emotion recognition based on facial expression, facial landmarks, gesture
+                and gait. Secondly, we adopt the channel and spatial attention modules
+                to obtain the emotion semantics of the scene context. Inspired by sociology theory, we explore the emotion transmission between agents by
+                constructing relationship graphs in the third context. Meanwhile, we propose a novel agent-object context, which aggregates emotion cues from
+                the interactions between surrounding agents and objects in the scene to
+                mitigate the ambiguity of prediction. Finally, we introduce an adaptive
+                relevance fusion module for learning the shared representations among
+                multiple contexts. Extensive experiments show that our approach outperforms the state-of-the-art methods on both EMOTIC and GroupWalk
+                datasets. We also release a dataset annotated with diverse emotion labels, Human Emotion in Context (HECO). In practice, we compare with
+                the existing methods on the HECO, and our approach obtains a higher
+                classification average precision of 50.65% and a lower regression mean
+                error rate of 0.7. The project is available at <a href="https://heco2022.github.io/" style="color: blue;"> https://heco2022.github.io/ </a></div>
+            <div class="bibtex"> </div>
         </div>
     </div>
 
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/aksan2022lipflow.png" class="thumbnail"></div>
+   <!-- publication -->
+   <div class="publication">
+        <div class="pubimg"><img src="publications/img/SPL.png" class="thumbnail"></div>
         <div class="pubtext">
-            <div class="pubtitle">LiP-Flow: Learning Inference-time Priors for Codec Avatars via Normalizing Flows in Latent Space</div>
-            <div class="pubauthors">Emre Aksan, Shugao Ma, Akin Caliskan, Stanislav Pidhorskyi, <b>Alexander Richard</b>, Shih-En Wei, Jason Saragih, Otmar Hilliges</div>
-            <div class="pubinfo">European Conference on Computer Vision (ECCV), 2022</div>
+            <div class="pubtitle">Contextual and Cross-modal Interaction for Multi-modal Speech Emotion Recognition</div>
+            <div class="pubauthors"><b>Dingkang Yang</b>, Shuai Huang, Yang Liu, Xiao Zhao, Siao Liu, Lihua Zhang*</div>
+            <div class="pubinfo">IEEE SIGNAL PROCESSING LETTERS (SPL)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://arxiv.org/abs/2203.07881">pdf</a></div>
+            <div class="pubbox"><a href="publications/pdf/SPL.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Neural face avatars that are trained from multi-view data captured in camera domes can produce photo-realistic 3D reconstructions. However, at inference time, they must be driven by limited inputs such as partial views recorded by headset-mounted cameras or a frontfacing camera, and sparse facial landmarks. To mitigate this asymmetry, we introduce a prior model that is conditioned on the runtime inputs and tie this prior space to the 3D face model via a normalizing flow in the latent space. Our proposed model, LiP-Flow, consists of two encoders that learn representations from the rich training-time and impoverished inference-time observations. A normalizing flow bridges the two representation spaces and transforms latent samples from one domain to another, allowing us to define a latent likelihood objective. We trained our model end-to-end to maximize the similarity of both representation spaces and the reconstruction quality, making the 3D face model aware of the limited driving signals. We conduct extensive evaluations where the latent codes are optimized to reconstruct 3D avatars from partial or sparse observations. We show that our approach leads to an expressive and effective prior, capturing facial dynamics and subtle expressions better.</div>
-            <div class="bibtex">@inproceedings{aksan2022lipflow,
-  title={LiP-Flow: Learning Inference-time Priors for Codec Avatars via Normalizing Flows in Latent Space},
-  author={Aksan, Emre and Ma, Shugao and Caliskan, Akin and Pidhorskyi, Stanislav and Richard, Alexander and Wei, Shih-En and Saragih, Jason and Hilliges, Otmar},
-  booktitle={European Conference on Computer Vision},
-  year={2022}
-}</div>
+            <div class="abstract">Speech emotion recognition combining linguistic
+                content and audio signals in the dialog is a challenging task.
+                Nevertheless, previous approaches have failed to explore emotion cues in contextual interactions and ignored the long-range
+                dependencies between elements from different modalities. To
+                tackle the above issues, this letter proposes a multimodal speech
+                emotion recognition method using audio and text data. We first
+                present a contextual transformer module to introduce contextual
+                information via embedding the previous utterances between
+                interlocutors, which enhances the emotion representation of the
+                current utterance. Then, the proposed cross-modal transformer
+                module focuses on the interactions between text and audio
+                modalities, adaptively promoting the fusion from one modality
+                to another. Furthermore, we construct associative topological
+                relation over mini-batch and learn the association between deep
+                fused features with graph convolutional network. Experimental
+                results on the IEMOCAP and MELD datasets show that our
+                method outperforms current state-of-the-art methods.</div>
+            <div class="bibtex"> </div>
         </div>
     </div>
 
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_end2endbinaural.png" class="thumbnail"></div>
+
+
+   <!-- publication -->
+   <div class="publication">
+        <div class="pubimg"><img src="publications/img/CA-SpaceNet.png" class="thumbnail"></div>
         <div class="pubtext">
-            <div class="pubtitle">End-to-End Binaural Speech Synthesis</div>
-            <div class="pubauthors">Wen-Chin Huang, Dejan Markovic, Israel D. Gebru, Anjali Menon, <b>Alexander Richard</b></div>
-            <div class="pubinfo">Interspeech, 2022</div>
+            <div class="pubtitle">CA-SpaceNet: Counterfactual Analysis for 6D Pose Estimation in Space</div>
+            <div class="pubauthors">Shunli Wang, Shuaibing Wang, Bo Jiao, <b>Dingkang Yang</b>, Liuzhen Su, Peng Zhai, Chixiao Chen, Lihua Zhang*</div>
+            <div class="pubinfo">2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://arxiv.org/abs/2207.03697">pdf</a></div>
+            <div class="pubbox"><a href="publications/pdf/slwang_CA-SpaceNet.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">In this work, we present an end-to-end binaural speech synthesis system that combines a low-bitrate audio codec with a powerful binaural decoder that is capable of accurate speech binauralization while faithfully reconstructing environmental factors like ambient noise or reverb. The network is a modified vector-quantized variational autoencoder, trained with several carefully designed objectives, including an adversarial loss. We evaluate the proposed system on an internal binaural dataset with objective metrics and a perceptual study. Results show that the proposed approach matches the ground truth data more closely than previous methods. In particular, we demonstrate the capability of the adversarial loss in capturing environment effects needed to create an authentic auditory scene.</div>
-            <div class="bibtex">@inproceedings{huang2022endtoend,
-  title={End-to-End Binaural Speech Synthesis},
-  author={Huang, Wen-Chin and Markovic, Dejan and Gebru, Israel D and Menon, Anjali and Richard, Alexander},
-  booktitle={Interspeech},
-  year={2022}
-}</div>
+            <div class="abstract">Reliable and stable 6D pose estimation of uncooperative space objects plays an essential role in on-orbit servicing and debris removal 
+                missions. Considering that the pose estimator is sensitive to background interference, this paper proposes a counterfactual analysis framework named CA-SpaceNet 
+                to complete robust 6D pose estimation of the spaceborne targets under complicated background. Specifically, conventional methods are adopted to extract the 
+                features of the whole image in the factual case. In the counterfactual case, a non-existent image without the target but only the background is imagined. 
+                Side effect caused by background interference is reduced by counterfactual analysis, which leads to unbiased prediction in final results. In addition, 
+                we also carry out lowbit-width quantization for CA-SpaceNet and deploy part of the framework to a Processing-In-Memory (PIM) accelerator on FPGA. 
+                Qualitative and quantitative results demonstrate the effectiveness and efficiency of our proposed method. To our best knowledge, this paper applies 
+                causal inference and network quantization to the 6D pose estimation of space-borne targets for the first time. 
+                The code is available at <a href="https://github.com/Shunli-Wang/CA-SpaceNet" style="color: blue;"> https://github.com/Shunli-Wang/CA-SpaceNet </a> .</div>
+            <div class="bibtex"> </div>
         </div>
     </div>
 
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_multichannel.png" class="thumbnail"></div>
+
+   <!-- publication -->
+   <div class="publication">
+        <div class="pubimg"><img src="publications/img/VAD.png" class="thumbnail"></div>
         <div class="pubtext">
-            <div class="pubtitle">Implicit Neural Spatial Filtering for Multichannel Source Separation in the Waveform Domain</div>
-            <div class="pubauthors">Dejan Markovic, Alexandre Defossez, <b>Alexander Richard</b></div>
-            <div class="pubinfo">Interspeech, 2022</div>
+            <div class="pubtitle">Learning Appearance-motion Normality for Video Anomaly Detection</div>
+            <div class="pubauthors">Yang Liu, Jing Liu, Mengyang Zhao, <b>Dingkang Yang</b>, ...</div>
+            <div class="pubinfo">IEEE International Conference on Multimedia and Expo (ICME 2022)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://arxiv.org/abs/2206.15423">pdf</a></div>
+            <div class="pubbox"><a href="publications/pdf/VAD.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">We present a single-stage casual waveform-to-waveform multichannel model that can separate moving sound sources based on their broad spatial locations in a dynamic acoustic scene. We divide the scene into two spatial regions containing, respectively, the target and the interfering sound sources. The model is trained end-to-end and performs spatial processing implicitly, without any components based on traditional processing or use of hand-crafted spatial features. We evaluate the proposed model on a real-world dataset and show that the model matches the performance of an oracle beamformer followed by a state-of-the-art single-channel enhancement network.</div>
-            <div class="bibtex">@inproceedings{markovic2022multichannel,
-  title={Implicit Neural Spatial Filtering for Multichannel Source Separation in the Waveform Domain},
-  author={Markovic, Dejan and Defossez, Alexandre and Richard, Alexander},
-  booktitle={Interspeech},
-  year={2022}
-}</div>
+            <div class="abstract">Video anomaly detection is a challenging task in the computer vision community. Most single task-based methods do
+                not consider the independence of unique spatial and temporal
+                patterns, while two-stream structures lack the exploration of
+                the correlations. In this paper, we propose spatial-temporal
+                memories augmented two-stream auto-encoder framework,
+                which learns the appearance normality and motion normality independently and explores the correlations via adversarial learning. Specifically, we first design two proxy tasks to
+                train the two-stream structure to extract appearance and motion features in isolation. Then, the prototypical features are
+                recorded in the corresponding spatial and temporal memory
+                pools. Finally, the encoding-decoding network performs adversarial learning with the discriminator to explore the correlations between spatial and temporal patterns. Experimental
+                results show that our framework outperforms the state-of-theart methods, achieving AUCs of 98.1% and 89.8% on UCSD
+                Ped2 and CUHK Avenue datasets.</div>
+            <div class="bibtex">@inproceedings{liu2022learning,
+                title={Learning Appearance-Motion Normality for Video Anomaly Detection},
+                author={Liu, Yang and Liu, Jing and Zhao, Mengyang and Yang, Dingkang and Zhu, Xiaoguang and Song, Liang},
+                booktitle={2022 IEEE International Conference on Multimedia and Expo (ICME)},
+                pages={1--6},
+                year={2022},
+                organization={IEEE Computer Society}
+              } </div>
         </div>
     </div>
 
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_av_codecs.png" class="thumbnail"></div>
+
+
+       <!-- publication -->
+   <div class="publication">
+        <div class="pubimg"><img src="publications/img/TSA-Net.png" class="thumbnail"></div>
         <div class="pubtext">
-            <div class="pubtitle">Audio-Visual Speech Codecs: Rethinking Audio-Visual Speech Enhancement by Re-Synthesis</div>
-            <div class="pubauthors">Karren Yang, Dejan Markovic, Steven Krenn, Vasu Agrawal, <b>Alexander Richard</b></div>
-            <div class="pubinfo">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022 (Oral)</div>
+            <div class="pubtitle">TSA-Net: Tube Self-Attention Network for Action Quality Assessment</div>
+            <div class="pubauthors">Shunli Wang, <b>Dingkang Yang</b>, Peng Zhai, Chixiao Chen, Lihua Zhang*</div>
+            <div class="pubinfo">ACM International Conference on Multimedia (ACM-MM 2021)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://github.com/facebookresearch/facestar/releases/download/paper_materials/video.mp4">Video</a></div>
-            <div class="pubbox"><a href="https://arxiv.org/abs/2203.17263">pdf</a></div>
+            <div class="pubbox"><a href="publications/pdf/slwang_TSA-Net.pdf">PDF</a></div>
+            <div class="pubbox"><a href="publications/pdf/slwang_TSA-Net_supp.pdf">Supp</a></div>
+            <div class="pubbox"><a href=https://github.com/Shunli-Wang/TSA-Net>Project</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Since facial actions such as lip movements contain significant information about speech content, it is not surprising that audio-visual speech enhancement methods are more accurate than their audio-only counterparts. Yet, state-of-the-art approaches still struggle to generate clean, realistic speech without noise artifacts and unnatural distortions in challenging acoustic environments. In this paper, we propose a novel audio-visual speech enhancement framework for high-fidelity telecommunications in AR/VR. Our approach leverages audio-visual speech cues to generate the codes of a neural speech codec, enabling efficient synthesis of clean, realistic speech from noisy signals. Given the importance of speaker-specific cues in speech, we focus on developing personalized models that work well for individual speakers. We demonstrate the efficacy of our approach on a new audio-visual speech dataset collected in an unconstrained, large vocabulary setting, as well as existing audio-visual datasets, outperforming speech enhancement baselines on both quantitative metrics and human evaluation studies. Please see the supplemental video for qualitative results.</div>
-            <div class="bibtex">@inproceedings{yang2022audiovisual,
-  title={Audio-Visual Speech Codecs: Rethinking Audio-Visual Speech Enhancement by Re-Synthesis},
-  author={Yang, Karren and Markovic, Dejan and Krenn, Steven and Agrawal, Vasu and Richard, Alexander},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2022}
-}</div>
+            <div class="abstract">In recent years, assessing action quality from videos has attracted growing attention in computer vision community and human-computer interaction. 
+                Most existing approaches usually tackle this problem by directly migrating the model from action recognition tasks, which ignores the intrinsic differences within the 
+                feature map such as foreground and background information. To address this issue, we propose a Tube Self-Attention Network (TSA-Net) for action quality assessment (AQA). 
+                Specifically, we introduce a single object tracker into AQA and propose the Tube Self-Attention Module (TSA), which can efficiently generate rich spatio-temporal contextual 
+                information by adopting sparse feature interactions. The TSA module is embedded in existing video networks to form TSA-Net. Overall, our TSA-Net is with the following merits: 1) 
+                High computational efficiency, 2) High flexibility, and 3) The state-of-the-art performance. Extensive experiments are conducted on popular action quality assessment datasets 
+                including AQA-7 and MTL-AQA. Besides, a dataset named Fall Recognition in Figure Skating (FR-FS) is proposed to explore the basic action assessment in the figure skating scene. 
+                Our TSA-Net achieves the Spearman's Rank Correlation of 0.8476 and 0.9393 on AQA-7 and MTL-AQA, respectively, which are the new state-of-the-art results. The results on FR-FS also 
+                verify the effectiveness of the TSA-Net. The code and FR-FS dataset are publicly available at <a href="https://github.com/Shunli-Wang/TSA-Net" style="color: blue;"> https://github.com/Shunli-Wang/TSA-Net </a>.</div>
+            <div class="bibtex"> @inproceedings{TSA-Net,
+                title={TSA-Net: Tube Self-Attention Network for Action Quality Assessment},
+                author={Wang, Shunli and Yang, Dingkang and Zhai, Peng and Chen, Chixiao and Zhang, Lihua},
+                booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
+                year={2021},
+                pages={4902–4910},
+                numpages={9}
+              }</div>
         </div>
     </div>
 
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_cdiff_speech_enhancement.png" class="thumbnail"></div>
+   <!-- publication -->
+   <div class="publication">
+        <div class="pubimg"><img src="publications/img/AQA.png" class="thumbnail"></div>
         <div class="pubtext">
-            <div class="pubtitle">Conditional Diffusion Probabilistic Model for Speech Enhancement</div>
-            <div class="pubauthors">Yen-Ju Lu, Zhong-Qiu Wang, Shinji Watanabe, <b>Alexander Richard</b>, Cheng Yu, Yu Tsao</div>
-            <div class="pubinfo">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2022</div>
+            <div class="pubtitle">A Survey of Video-based Action Quality Assessment</div>
+            <div class="pubauthors">Shunli Wang, <b>Dingkang Yang</b>, Peng Zhai, Qing Yu, Tao Suo, Zhan Sun, Ka Li, Lihua Zhang*</div>
+            <div class="pubinfo">International Conference on Networking Systems of AI (INSAI 2021)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_cdiff_speech_enhancement.pdf">pdf</a></div>
+            <div class="pubbox"><a href="publications/pdf/slwang_AQA-Survey.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Speech enhancement is a critical component of many user-oriented audio applications, yet current systems still suffer from distorted and unnatural outputs. While generative models have shown strong potential in speech synthesis, they are still lagging behind in speech enhancement. This work leverages recent advances in diffusion probabilistic models, and proposes a novel speech enhancement algorithm that incorporates characteristics of the observed noisy speech signal into the diffusion and reverse processes. More specifically, we propose a generalized formulation of the diffusion probabilistic model named conditional diffusion probabilistic model that, in its reverse process, can adapt to non-Gaussian real noises in the estimated speech signal. In our experiments, we demonstrate strong performance of the proposed approach compared to representative generative models, and investigate the generalization capability of our models to other datasets with noise characteristics unseen during training.</div>
-            <div class="bibtex">@inproceedings{richard2022cdiff,
-  title={Conditional Diffusion Probabilistic Model for Speech Enhancement},
-  author={Lu, Yen-Ju Lu and Wang, Zhong-Qiu and Watanabe, Shinji and Richard, Alexander, Yu, Cheng and Tsao, Yu},
-  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
-  year={2022}
-}</div>
+            <div class="abstract">Human action recognition and analysis have great demand and important application significance in video surveillance, video retrieval, 
+                and human-computer interaction. The task of human action quality evaluation requires the intelligent system to automatically and objectively evaluate the 
+                action completed by the human. The action quality assessment model can reduce the human and material resources spent in action evaluation and reduce subjectivity. 
+                In this paper, we provide a comprehensive survey of existing papers on video-based action quality assessment. Different from human action recognition, 
+                the application scenario of action quality assessment is relatively narrow. Most of the existing work focuses on sports and medical care. We first introduce the 
+                definition and challenges of human action quality assessment. Then we present the existing datasets and evaluation metrics. In addition, we summarized the methods 
+                of sports and medical care according to the model categories and publishing institutions according to the characteristics of the two fields. At the end, combined 
+                with recent work, the promising development direction in action quality assessment is discussed.</div>
+            <div class="bibtex"> @inproceedings{AQA_Survey,
+                title={A Survey of Video-based Action Quality Assessment}, 
+                author={Wang, Shunli and Yang, Dingkang and Zhai, Peng and Yu, Qing and Suo, Tao and Sun, Zhan and Li, Ka and Zhang, Lihua},
+                booktitle={2021 International Conference on Networking Systems of AI (INSAI)}, 
+                year={2021},
+                volume={},
+                number={},
+                pages={1-9},
+                doi={10.1109/INSAI54028.2021.00029}
+              }</div>
         </div>
     </div>
 
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_deep_impulse_responses.png" class="thumbnail"></div>
+   <!-- publication -->
+   <div class="publication">
+        <div class="pubimg"><img src="publications/img/MAPP.png" class="thumbnail"></div>
         <div class="pubtext">
-            <div class="pubtitle">Deep Impulse Responses: Estimating and Parameterizing Filters with Deep Networks</div>
-            <div class="pubauthors"><b>Alexander Richard</b>, Peter Dodds, Vamsi Krishna Ithapu</div>
-            <div class="pubinfo">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2022</div>
+            <div class="pubtitle">An Improved Ant Colony Optimization Algorithm for Multi-Agent Path Planning</div>
+            <div class="pubauthors">Shuai Huang, <b>Dingkang Yang</b>, Chuyi Zhong, Shichao Yan, Lihua Zhang*</div>
+            <div class="pubinfo">International Conference on Networking Systems of AI (INSAI 2021)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_deep_impulse_responses.pdf">pdf</a></div>
+            <div class="pubbox"><a href="publications/pdf/MAPP.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Impulse response estimation in high noise and in-the-wild settings, with minimal control of the underlying data distributions, is a challenging problem. We propose a novel framework for parameterizing and estimating impulse responses based on recent advances in neural representation learning. Our framework is driven by a carefully designed neural network that jointly estimates the impulse response and the (apriori unknown) spectral noise characteristics of an observed signal given the source signal. We demonstrate robustness in estimation, even under low signal-to-noise ratios, and show strong results when learning from spatio-temporal real-world speech data. Our framework provides a natural way to interpolate impulse responses on a spatial grid, while also allowing for efficiently compressing and storing them for real-time rendering applications in augmented and virtual reality.</div>
-            <div class="bibtex">@inproceedings{richard2022deepimpulse,
-  title={Deep Impulse Responses: Estimating and Parameterizing Filters with Deep Networks},
-  author={Richard, Alexander and Dodds, Peter and Ithapu, Vamsi Krishna},
-  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
-  year={2022}
-}</div>
+            <div class="abstract">—In recent years, Ant Colony Optimization
+                algorithm has become one of the most widely used heuristic
+                algorithms and has been apply to solve different types of path
+                planning problems. However, there still are some problems in
+                Multi-Agent Path Finding, such as low convergence efficiency,
+                easy to fall into local optimum and vertex conflict. In this
+                paper, we proposed an Improved Ant Colony Optimization
+                algorithm based on parameter optimization and vertex conflict
+                resolution. First of all, we initialize the distribution of
+                pheromones to reduce the blindness of the algorithm in the
+                early stage. Secondly, we introduce an adaptive pheromone
+                intensity and pheromone reduction factor to avoid the
+                algorithm falling into local optimum. On this basis, the
+                algorithmÿs global search ability and convergence speed are
+                improved by dynamic modification of the evaporation factor
+                and heuristic function. In addition, the strategy of dynamically
+                modifying the influence factor and heuristic function improves
+                the global search ability and convergence speed of the
+                algorithm. To solve vertex conflict in MAPF, we use the design
+                conflict prediction and resolution strategy to effectively avoid
+                vertex conflict and improve the reliability of the multi-agent
+                system. Simulation experiments verify the effectiveness and
+                adaptability of IACO under different complexity environments,
+                and prove that IACO has good convergence speed and path
+                global optimization ability.</div>
+            <div class="bibtex"> @inproceedings{huang2021improved,
+                title={An Improved Ant Colony Optimization Algorithm for Multi-Agent Path Planning},
+                author={Huang, Shuai and Yang, Dingkang and Zhong, Chuyi and Yan, Shichao and Zhang, Lihua},
+                booktitle={2021 International Conference on Networking Systems of AI (INSAI)},
+                pages={95--100},
+                year={2021},
+                organization={IEEE}
+              }</div>
         </div>
     </div>
 
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_meshtalk.png" class="thumbnail"></div>
+
+   <!-- publication -->
+   <div class="publication">
+        <div class="pubimg"><img src="publications/img/ICIP.png" class="thumbnail"></div>
         <div class="pubtext">
-            <div class="pubtitle">MeshTalk: 3D Face Animation from Speech using  Cross-Modality Disentanglement</div>
-            <div class="pubauthors"><b>Alexander Richard</b>, Michael Zollhoefer, Yandong Wen, Fernando de la Torre, Yaser Sheikh</div>
-            <div class="pubinfo">IEEE International Conference on Computer Vision (ICCV), 2021</div>
+            <div class="pubtitle">Learning Associative Representation For Facial Expression Recognition</div>
+            <div class="pubauthors">Yangtao Du, <b>Dingkang Yang</b>, Peng Zhai, Mingcheng Li, Lihua Zhang*</div>
+            <div class="pubinfo">2021 IEEE International Conference on Image Processing (ICIP2021)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://www.facebook.com/MetaResearch/videos/251508987094387/">Video</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_meshtalk.pdf">pdf</a></div>
+            <div class="pubbox"><a href="publications/pdf/ICIP.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="pubbox"><a href="https://github.com/facebookresearch/meshtalk">Code</a></div>
-            <div class="abstract">This paper presents a generic method for generating full facial 3D animation from speech. Existing approaches to audio-driven facial animation exhibit uncanny or static upper face animation, fail to produce accurate and plausible co-articulation or rely on person-specific models that limit their scalability. To improve upon existing models, we propose a generic audio-driven facial animation approach that achieves highly realistic motion synthesis results for the entire face. At the core of our approach is a categorical latent space for facial animation that disentangles audio-correlated and audio-uncorrelated information based on a novel cross-modality loss. Our approach ensures highly accurate lip motion, while also synthesizing plausible animation of the parts of the face that are uncorrelated to the audio signal, such as eye blinks and eye brow motion.
-We demonstrate that our approach outperforms several baselines and obtains state-of-the-art quality both qualitatively and quantitatively. A perceptual user study demonstrates that our approach is deemed more realistic than the current state-of-the-art in over 75% of cases. We recommend watching the supplemental video before reading the paper.</div>
-            <div class="bibtex">@inproceedings{richard2021meshtalk,
-  title={MeshTalk: 3D Face Animation from Speech using Cross-Modality Disentanglement}, 
-  author={Alexander Richard and Michael Zollhoefer and Yandong Wen and Fernando de la Torre and Yaser Sheikh},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-  year={2021}
-}</div>
+            <div class="abstract">The main inherent challenges with the Facial Expression
+                Recognition (FER) are high intra-class variations and high
+                inter-class similarities, while existing methods pay little
+                attention to the association within inter- and intra-class
+                expressions. This paper introduces a novel Expression
+                Associative Network (EAN) to learn association of facial
+                expression, specifically, from two aspects: 1) associative
+                topological relation over mini-batch is constructed by
+                similarity matrix with an adjacent regularization, and 2)
+                learning association of expressions with Graph
+                Convolutional Network (GCN). Besides, an auxiliary
+                module as invariant feature generator based on Generative
+                Adversarial Networks (GAN) is designed to suppress pose
+                variations, illumination changes, and occlusions. Results on
+                public benchmarks achieve comparable or better
+                performance compared with current state-of-the-art
+                methods, with 90.07% on FERPlus, 86.36% on RAF-DB,
+                and improve by 3.92% over SOTA on synthetic wrong
+                labeling datasets.</div>
+            <div class="bibtex"> @inproceedings{du2021learning,
+                title={Learning Associative Representation For Facial Expression Recognition},
+                author={Du, Yangtao and Yang, Dingkang and Zhai, Peng and Li, Mingchen and Zhang, Lihua},
+                booktitle={2021 IEEE International Conference on Image Processing (ICIP)},
+                pages={889--893},
+                year={2021},
+                organization={IEEE}
+              }</div>
         </div>
     </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_neural_synthesis_of_binaural_speech.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Neural Synthesis of Binaural Speech from Mono Audio</div>
-            <div class="pubauthors"><b>Alexander Richard</b>, Dejan Markovic, Israel D. Gebru, Steven Krenn, Gladstone Butler, Fernando de la Torre, Yaser Sheikh</div>
-            <div class="pubinfo">International Conference on Learning Representations (ICLR), 2021 (Outstanding Paper Award)</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://iclr.cc/virtual/2021/oral/3468">Video</a></div>
-            <div class="pubbox"><a href="https://openreview.net/pdf?id=uAX8q61EVRu">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="pubbox"><a href="https://research.fb.com/publications/neural-synthesis-of-binaural-speech-from-mono-audio/">Supplementary</a></div>
-            <div class="pubbox"><a href="https://github.com/facebookresearch/BinauralSpeechSynthesis">Code</a></div>
-            <div class="abstract"> We present a neural rendering approach for binaural sound synthesis that can produce realistic and spatially accurate binaural sound in realtime. The network takes, as input, a single-channel audio source and synthesizes, as output, two-channel binaural sound, conditioned on the relative position and orientation of the listener with respect to the source. We investigate deficiencies of the l2-loss on raw waveforms in a theoretical analysis and introduce an improved loss that overcomes these limitations. In an empirical evaluation, we establish that our approach is the first to generate spatially accurate waveform outputs (as measured by real recordings) and outperforms existing approaches by a considerable margin, both quantitatively and in a perceptual study. We will release a first-of-its-kind binaural audio dataset as a benchmark for future research.</div>
-            <div class="bibtex">@inproceedings{richard2021binaural,
-  title={Neural Synthesis of Binaural Speech from Mono Audio},
-  author={Richard, Alexander and Markovic, Dejan and Gebru, Israel D and Krenn, Steven and Butler, Gladstone and de la Torre, Fernando and Sheikh, Yaser},
-  booktitle={International Conference on Learning Representations},
-  year={2021}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_implicit_hrtf.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Implicit HRTF Modeling Using Temporal Convolutional Networks</div>
-            <div class="pubauthors">Israel D. Gebru, Dejan Markovic, <b>Alexander Richard</b>, Steven Krenn, Gladstone Butler, Fernando de la Torre, Yaser Sheikh</div>
-            <div class="pubinfo">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2021</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_implicit_hrtf.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Estimation of accurate head-related transfer functions (HRTFs) is crucial to achieve realistic binaural acoustic experiences. HRTFs depend on source/listener locations and are therefore expensive and cumbersome to measure; traditional approaches require listener-dependent measurements of HRTFs at thousands of distinct spatial directions in an anechoic chamber. In this work, we present a data-driven approach to learn HRTFs implicitly with a neural network that achieves state of the art results compared to traditional approaches but relies on a much simpler data capture that can be performed in arbitrary, non-anechoic rooms. Despite that simpler and less acoustically ideal data capture, our deep learning based approach learns HRTFs of high quality. We show in a perceptual study that the produced binaural audio is ranked on par with traditional DSP approaches by humans and illustrate that interaural time differences (ITDs), interaural level differences (ILDs) and spectral clues are accurately estimated.</div>
-            <div class="bibtex">@inproceedings{richard2021implicit,
-  title={Implicit HRTF Modeling Using Temporal Convolutional Networks},
-  author={Gebru, Israel D and Markovic, Dejan and Richard, Alexander and Krenn, Steven and Butler, Gladstone and de la Torre, Fernando and Sheikh, Yaser},
-  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
-  year={2021}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_audio_and_gaze_driven_codec_avatars.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Audio- and Gaze-driven Facial Animation of Codec Avatars</div>
-            <div class="pubauthors"><b>Alexander Richard</b>*, Colin Lea*, Shugao Ma, Juergen Gall, Fernando de la Torre, Yaser Sheikh</div>
-            <div class="pubinfo">Winter Conference on Applications of Computer Vision (WACV), 2021</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://research.fb.com/videos/audio-and-gaze-driven-facial-animation-of-codec-avatars/">Video</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_audio_and_gaze_driven_codec_avatars.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Codec Avatars are a recent class of learned, photorealistic face models that accurately represent the geometry and texture of a person in 3D (i.e., for virtual reality), and are almost indistinguishable from video. In this paper we describe the first approach to animate these parametric models in real-time which could be deployed on commodity virtual reality hardware using audio and/or eye tracking. Our goal is to display expressive conversations between individuals that exhibit important social signals such as laughter and excitement solely from latent cues in our lossy input signals. To this end we collected over 5 hours of high frame rate 3D face scans across three participants including traditional neutral speech as well as expressive and conversational speech. We investigate a multimodal fusion approach that dynamically identifies which sensor encoding should animate which parts of the face at any time. See the supplemental video which demonstrates our ability to generate full face motion far beyond the typically neutral lip articulations seen in competing work: https://research.fb.com/videos/audio-and-gaze-driven-facial-animation-of-codec-avatars/</div>
-            <div class="bibtex">@inproceedings{richard2021audiogaze,
-    title={Audio- and Gaze-driven Facial Animation of Codec Avatars},
-    author={Alexander Richard and Colin Lea and Shugao Ma and Juergen Gall and Fernando de la Torre and Yaser Sheikh},
-    booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-    year={2021},
-    pages={41-50}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_thesis.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Temporal Segmentation of Human Actions in Videos</div>
-            <div class="pubauthors"><b>Alexander Richard</b></div>
-            <div class="pubinfo">PhD Thesis, 2019</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="http://hss.ulb.uni-bonn.de/2019/5602/5602.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Understanding human actions in videos is of great interest in various scenarios ranging from surveillance over quality control in production processes to content-based video search. Algorithms for automatic temporal action segmentation need to overcome severe difficulties in order to be reliable and provide sufficiently good quality. Not only can human actions occur in different scenes and surroundings, the definition on an action itself is also inherently fuzzy, leading to a significant amount of inter-class variations. Moreover, besides finding the correct action label for a pre-defined temporal segment in a video, localizing an action in the first place is anything but trivial. Different actions not only vary in their appearance and duration but also can have long-range temporal dependencies that span over the complete video. Further, getting reliable annotations of large amounts of video data is time consuming and expensive. The goal of this thesis is to advance current approaches to temporal action segmentation. We therefore propose a generic framework that models the three components of the task explicitly, ie long-range temporal dependencies are handled by a context model, variations in segment durations are represented by a length model, and short-term appearance and motion of actions are addressed with a visual model. While the inspiration for the context model mainly comes from word sequence models in natural language processing, the visual model builds upon recent advances in the classification of pre-segmented action clips. Considering that long-range temporal context is crucial, we avoid local segmentation decisions and find the globally optimal temporal segmentation of a video under the explicit models. Throughout the thesis, we provide explicit formulations and training strategies for the proposed generic action segmentation framework under different supervision conditions. First, we address the task of fully supervised temporal action segmentation, where frame-level annotations are available during training. We show that our approach can outperform early sliding window baselines and recent deep architectures and that explicit length and context modeling leads to substantial improvements. Considering that full frame-level annotation is expensive to obtain, we then formulate a weakly supervised training algorithm that uses ordered sequences of actions occurring in the video as only supervision. While a first approach reduces the weakly supervised setup to a fully supervised setup by generating a pseudo ground-truth during training, we propose a second approach that avoids this intermediate step and allows to directly optimize a loss based on the weak supervision. Closing the gap between the fully and the weakly supervised setup, we moreover evaluate semi-supervised learning, where video frames are sparsely annotated. With the motivation that the vast amount of video data on the Internet only comes with meta-tags or content keywords that do not provide any temporal ordering information, we finally propose a method for action segmentation that learns from unordered sets of actions only. All approaches are evaluated on several commonly used benchmark datasets. With the proposed methods, we reach state-of-the-art performance for both, fully and weakly supervised action segmentation.</div>
-            <div class="bibtex">@phdthesis{richard2019temporal,
-  title={Temporal Segmentation of Human Actions in Videos},
-  author={Richard, Alexander},
-  year={2019},
-  school={Universit{\"a}ts-und Landesbibliothek Bonn}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_enhancing_action_localization.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Enhancing Temporal Action Localization with Transfer Learning from Action Recognition</div>
-            <div class="pubauthors"><b>Alexander Richard</b>*, Ahsan Iqbal*, Juergen Gall</div>
-            <div class="pubinfo">Comprehensive Video Understanding in the Wild (CoVieW, ICCV workshop), 2019</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_enhancing_action_localization.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Temporal localization of actions in videos has been of increasing interest in recent years. However, most existing approaches rely on complex architectures that are either expensive to train, inefficient at inference time, or require thorough and careful architecture engineering. Classical action recognition on pre-segmented clips, on the other hand, benefits from sophisticated deep architectures that paved the way for highly reliable video clip classifiers. In this paper, we propose to use transfer learning to leverage the good results from action recognition for temporal localization. We apply a network that is inspired by the classical bag-of-words model for transfer learning and show that the resulting framewise class posteriors already provide good results without explicit temporal modeling. Further, we show that combining these features with a deep but simple convolutional network achieves state of the art results on two challenging action localization datasets.</div>
-            <div class="bibtex">@inproceedings{richard2019enhancing,
-  title={Enhancing Temporal Action Localization with Transfer Learning from Action Recognition}
-  author={Richard, Alexander and Iqbal, Ahsan, and Gall, Juergen},
-  booktitle={Comprehensive Video Understanding in the Wild},
-  year={2019}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_hybrid_rnn_hmm.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">A Hybrid RNN-HMM Approach for Weakly Supervised Temporal Action Segmentation</div>
-            <div class="pubauthors">Hilde Kuehne*, <b>Alexander Richard</b>*, Juergen Gall</div>
-            <div class="pubinfo">IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI), 2019</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_hybrid_rnn_hmm.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Action recognition has become a rapidly developing research field within the last decade. But with the increasing demand for large scale data, the need of hand annotated data for the training becomes more and more impractical. One way to avoid frame-based human annotation is the use of action order information to learn the respective action classes. In this context, we propose a hierarchical approach to address the problem of weakly supervised learning of human actions from ordered action labels by structuring recognition in a coarse-to-fine manner. Given a set of videos and an ordered list of the occurring actions, the task is to infer start and end frames of the related action classes within the video and to train the respective action classifiers without any need for hand labeled frame boundaries. We address this problem by combining a framewise RNN model with a coarse probabilistic inference. This combination allows for the temporal alignment of long sequences and thus, for an iterative training of both elements. While this system alone already generates good results, we show that the performance can be further improved by approximating the number of subactions to the characteristics of the different action classes as well as by the introduction of a regularizing length prior. The proposed system is evaluated on two benchmark datasets, the Breakfast and the Hollywood extended dataset, showing a competitive performance on various weak learning tasks such as temporal action segmentation and action alignment.</div>
-            <div class="bibtex">@article{richard2019hybrid,
-  title={A Hybrid RNN-HMM Approach for Weakly Supervised Temporal Action Segmentation},
-  author={Kuehne, Hilde and Richard, Alexander and Gall, Juergen},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  year={2019},
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_nn_viterbi.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning</div>
-            <div class="pubauthors"><b>Alexander Richard</b>, Hilde Kuehne, Ahsan Iqbal, Juergen Gall</div>
-            <div class="pubinfo">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://www.youtube.com/watch?v=O92bGCTxul8&feature=youtu.be&t=6051">Spotlight</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_nn_viterbi.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_nn_viterbi_supplementary.pdf">Supplementary</a></div>
-            <div class="pubbox"><a href="https://github.com/alexanderrichard/NeuralNetwork-Viterbi">Code</a></div>
-            <div class="abstract">Video learning is an important task in computer vision and has experienced increasing interest over the recent years. Since even a small amount of videos easily comprises several million frames, methods that do not rely on a frame-level annotation are of special importance. In this work, we propose a novel learning algorithm with a Viterbi-based loss that allows for online and incremental learning of weakly annotated video data. We moreover show that explicit context and length modeling leads to huge improvements in video segmentation and labeling tasks and include these models into our framework. On several action segmentation benchmarks, we obtain an improvement of up to 10% compared to current state-of-the-art methods.</div>
-            <div class="bibtex">@inproceedings{richard2018nnviterbi,
-  title={NeuralNetwork-Viterbi: A Framework for Weakly Supervised Video Learning},
-  author={Richard, Alexander and Kuehne, Hilde, and Iqbal, Ahsan, and Gall, Juergen},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  year={2018}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_action_sets.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Action Sets: Weakly Supervised Action Segmentation without Ordering Constraints</div>
-            <div class="pubauthors"><b>Alexander Richard</b>, Hilde Kuehne, Juergen Gall</div>
-            <div class="pubinfo">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://www.youtube.com/watch?v=GBo4sFNzhtU&feature=youtu.be&t=6471">Spotlight</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_action_sets.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_action_sets_supplementary.pdf">Supplementary</a></div>
-            <div class="pubbox"><a href="https://github.com/alexanderrichard/action-sets">Code</a></div>
-            <div class="abstract">Action detection and temporal segmentation of actions in videos are topics of increasing interest. While fully supervised systems have gained much attention lately, full annotation of each action within the video is costly and impractical for large amounts of video data. Thus, weakly supervised action detection and temporal segmentation methods are of great importance. While most works in this area assume an ordered sequence of occurring actions to be given, our approach only uses a set of actions. Such action sets provide much less supervision since neither action ordering nor the number of action occurrences are known. In exchange, they can be easily obtained, for instance, from meta-tags, while ordered sequences still require human annotation. We introduce a system that automatically learns to temporally segment and label actions in a video, where the only supervision that is used are action sets. An evaluation on three datasets shows that our method still achieves good results although the amount of supervision is significantly smaller than for other related methods.</div>
-            <div class="bibtex">@inproceedings{richard2018actionsets,
-  title={Action Sets: Weakly Supervised Action Segmentation without Ordering Constraints},
-  author={Richard, Alexander and Kuehne, Hilde, and Gall, Juergen},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  year={2018}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_when_will_you_do_what.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">When will you do what? - Anticipating Temporal Occurrences of Activities</div>
-            <div class="pubauthors">Yazan Abu Farha, <b>Alexander Richard</b>, Juergen Gall</div>
-            <div class="pubinfo">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_when_will_you_do_what.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Analyzing human actions in videos has gained increased attention recently. While most works focus on classifying and labeling observed video frames or anticipating the very recent future, making long-term predictions over more than just a few seconds is a task with many practical applications that has not yet been addressed. In this paper, we propose two methods to predict a considerably large amount of future actions and their durations. Both, a CNN and an RNN are trained to learn future video labels based on previously seen content. We show that our methods generate accurate predictions of the future even for long videos with a huge amount of different actions and can even deal with noisy or erroneous input information.</div>
-            <div class="bibtex">@inproceedings{richard2018whenwillyoudowhat,
-  title={When will you do what? - Anticipating Temporal Occurrences of Activities},
-  author={Abu Farah, Yazan and Richard, Alexander and Gall, Juergen},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  year={2018}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_recurrent_residual.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Recurrent Residual Learning for Action Recognition</div>
-            <div class="pubauthors">Ahsan Iqbal, <b>Alexander Richard</b>, Hilde Kuehne, Juergen Gall</div>
-            <div class="pubinfo">German Conference on Pattern Recognition (GCPR), 2017 (Best Master's Award)</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_recurrent_residual_learning.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Action recognition is a fundamental problem in computer vision with a lot of potential applications such as video surveillance, human computer interaction, and robot learning. Given pre-segmented videos, the task is to recognize actions happening within videos. Historically, hand crafted video features were used to address the task of action recognition. With the success of Deep ConvNets as an image analysis method, a lot of extensions of standard ConvNets were purposed to process variable length video data. In this work, we propose a novel recurrent ConvNet architecture called recurrent residual networks to address the task of action recognition. The approach extends ResNet, a state of the art model for image classification. While the original formulation of ResNet aims at learning spatial residuals in its layers, we extend the approach by introducing recurrent connections that allow to learn a spatio-temporal residual. In contrast to fully recurrent networks, our temporal connections only allow a limited range of preceding frames to contribute to the output for the current frame, enabling efficient training and inference as well as limiting the temporal context to a reasonable local range around each frame. On a large-scale action recognition dataset, we show that our model improves over both, the standard ResNet architecture and a ResNet extended by a fully recurrent layer.</div>
-            <div class="bibtex">@inproceedings{richard2017recurrent,
-  title={Recurrent Residual Learning for Action Recognition},
-  author={Iqbal, Ahsan and Richard, Alexander and Kuehne, Hilde and Gall, Juergen},
-  booktitle={German Conference on Pattern Recognition},
-  year={2017}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_weakly_supervised_action_learning.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Weakly Supervised Action Learning with RNN based Fine-to-coarse Modeling</div>
-            <div class="pubauthors"><b>Alexander Richard</b>, Hilde Kuehne, Juergen Gall</div>
-            <div class="pubinfo">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017 (Oral)</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://www.youtube.com/watch?v=sLabVpjzPnI">Oral</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_weakly_supervised_action_learning.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="pubbox"><a href="https://github.com/alexanderrichard/squirrel">Code</a></div>
-            <div class="abstract">We present an approach for weakly supervised learning of human actions. Given a set of videos and an ordered list of the occurring actions, the goal is to infer start and end frames of the related action classes within the video and to train the respective action classifiers without any need for hand labeled frame boundaries. To address this task, we propose a combination of a discriminative representation of subactions, modeled by a recurrent neural network, and a coarse probabilistic model to allow for a temporal alignment and inference over long sequences. While this system alone already generates good results, we show that the performance can be further improved by approximating the number of subactions to the characteristics of the different action classes. To this end, we adapt the number of subaction classes by iterating realignment and reestimation during training. The proposed system is evaluated on two benchmark datasets, the Breakfast and the Hollywood extended dataset, showing a competitive performance on various weak learning tasks such as temporal action segmentation and action alignment.</div>
-            <div class="bibtex">@inproceedings{richard2017weakly,
-  title={Weakly supervised action learning with RNN based fine-to-coarse modeling},
-  author={Richard, Alexander and Kuehne, Hilde, and Gall, Juergen},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  year={2017}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_weakly_supervised_learning.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Weakly Supervised Learning of Actions from Transcripts</div>
-            <div class="pubauthors">Hilde Kuehne, <b>Alexander Richard</b>, Juergen Gall</div>
-            <div class="pubinfo">Computer Vision and Image Understanding (CVIU), 2017</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_weakly_supervised_learning.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">We present an approach for weakly supervised learning of human actions from video transcriptions. Our system is based on the idea that, given a sequence of input data and a transcript, i.e. a list of the order the actions occur in the video, it is possible to infer the actions within the video stream, and thus, learn the related action models without the need for any frame-based annotation. Starting from the transcript information at hand, we split the given data sequences uniformly based on the number of expected actions. We then learn action models for each class by maximizing the probability that the training video sequences are generated by the action models given the sequence order as defined by the transcripts. The learned model can be used to temporally segment an unseen video with or without transcript. We evaluate our approach on four distinct activity datasets, namely Hollywood Extended, MPII Cooking, Breakfast and CRIM13. We show that our system is able to align the scripted actions with the video data and that the learned models localize and classify actions competitively in comparison to models trained with full supervision, i.e. with frame level annotations, and that they outperform any current state-of-the-art approach for aligning transcripts with video data.</div>
-            <div class="bibtex">@article{richard2017weaklysupervised,
-  title={Weakly supervised learning of actions from transcripts},
-  author={Kuehne, Hilde and Richard, Alexander and Gall, Juergen},
-  journal={Computer Vision and Image Understanding},
-  year={2017},
-  publisher={Elsevier}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_bow_equivalent_rnn_cviu.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">A Bag-of-Words Equivalent Recurrent Neural Network for Action Recognition</div>
-            <div class="pubauthors"><b>Alexander Richard</b>, Juergen Gall</div>
-            <div class="pubinfo">Computer Vision and Image Understanding (CVIU), 2017</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_bow_equivalent_rnn_cviu.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="pubbox"><a href="https://github.com/alexanderrichard/squirrel">Code</a></div>
-            <div class="abstract">The traditional bag-of-words approach has found a wide range of applications in computer vision. The standard pipeline consists of a generation of a visual vocabulary, a quantization of the features into histograms of visual words, and a classification step for which usually a support vector machine in combination with a non-linear kernel is used. Given large amounts of data, however, the model suffers from a lack of discriminative power. This applies particularly for action recognition, where the vast amount of video features needs to be subsampled for unsupervised visual vocabulary generation. Moreover, the kernel computation can be very expensive on large datasets. In this work, we propose a recurrent neural network that is equivalent to the traditional bag-of-words approach but enables for the application of discriminative training. The model further allows to incorporate the kernel computation into the neural network directly, solving the complexity issue and allowing to represent the complete classification system within a single network. We evaluate our method on four recent action recognition benchmarks and show that the conventional model as well as sparse coding methods are outperformed.</div>
-            <div class="bibtex">@article{richard2017bag,
-  title={A bag-of-words equivalent recurrent neural network for action recognition},
-  author={Richard, Alexander and Gall, Juergen},
-  journal={Computer Vision and Image Understanding},
-  volume={156},
-  pages={79--91},
-  year={2017},
-  publisher={Elsevier}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_temporal_action_detection.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Temporal Action Detection using a Statistical Language Model</div>
-            <div class="pubauthors"><b>Alexander Richard</b>, Juergen Gall</div>
-            <div class="pubinfo">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="https://www.youtube.com/watch?v=qrArshf7bjA">Spotlight</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_temporal_action_detection.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="pubbox"><a href="https://github.com/alexanderrichard/squirrel">Code</a></div>
-            <div class="abstract">While current approaches to action recognition on pre-segmented video clips already achieve high accuracies, temporal action detection is still far from comparably good results. Automatically locating and classifying the relevant action segments in videos of varying lengths proves to be a challenging task. We propose a novel method for temporal action detection including statistical length and language modeling to represent temporal and contextual structure. Our approach aims at globally optimizing the joint probability of three components, a length and language model and a discriminative action model, without making intermediate decisions. The problem of finding the most likely action sequence and the corresponding segment boundaries in an exponentially large search space is addressed by dynamic programming. We provide an extensive evaluation of each model component on Thumos 14, a large action detection dataset, and report state-of-the-art results on three datasets.</div>
-            <div class="bibtex">@inproceedings{richard2016temporal,
-  title={Temporal action detection using a statistical language model},
-  author={Richard, Alexander and Gall, Juergen},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={3131--3140},
-  year={2016}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_bow_equivalent_rnn.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">A BoW-equivalent Recurrent Neural Network for Action Recognition</div>
-            <div class="pubauthors"><b>Alexander Richard</b>, Juergen Gall</div>
-            <div class="pubinfo">British Machine Vision Conference (BMVC), 2015</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_bow_equivalent_rnn.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="pubbox"><a href="https://github.com/alexanderrichard/squirrel">Code</a></div>
-            <div class="abstract">Bag-of-words (BoW) models are widely used in the field of computer vision. A BoW model consists of a visual vocabulary that is generated by unsupervised clustering the features of the training data, e.g., by using kMeans. The clustering methods, however, struggle with large amounts of data, in particular, in the context of action recognition. In this paper, we propose a transformation of the standard BoW model into a neural network, enabling discriminative training of the visual vocabulary on large action recognition datasets. We show that our model is equivalent to the original BoW model but allows for the application of supervised neural network training. Our model outperforms the conventional BoW model and sparse coding methods on recent action recognition benchmarks.</div>
-            <div class="bibtex">@inproceedings{richard2015bow,
-  title={A BoW-equivalent Recurrent Neural Network for Action Recognition.},
-  author={Richard, Alexander and Gall, Juergen},
-  booktitle={British Machine Vision Conference},
-  volume={6},
-  year={2015}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_mnsgd.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Mean-normalized Stochastic Gradient for Large-scale Deep Learning</div>
-            <div class="pubauthors">Simon Wiesler, <b>Alexander Richard</b>, Ralf Schl&uumlter, Hermann Ney</div>
-            <div class="pubinfo">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2014</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_mnsgd.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Deep neural networks are typically optimized with stochastic gradient descent (SGD). In this work, we propose a novel second-order stochastic optimization  algorithm. The algorithm is based on  analytic results showing that a non-zero mean of features is harmful for the optimization. We prove convergence of our algorithm in a convex setting. In our experiments we show that our proposed algorithm converges faster than SGD. Further, in contrast to earlier work, our algorithm allows for training models with a factorized structure from scratch. We found this structure to be very useful not only because it accelerates training and decoding, but also because it is a very effective means against overfitting.  Combining our proposed optimization algorithm with this model structure, model size can be reduced by a factor of eight and still improvements in recognition error rate are obtained. Additional gains are obtained by improving the Newbob learning rate strategy.</div>
-            <div class="bibtex">@inproceedings{richard2014mnsgd,
-  title={Mean-normalized stochastic gradient for large-scale deep learning},
-  author={Wiesler, Simon and Richard, Alexander and Schluter, Ralf and Ney, Hermann},
-  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
-  pages={180--184},
-  year={2014}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_rasr.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">RASR/NN: The RWTH Neural Network Toolkit for Speech Recognition</div>
-            <div class="pubauthors">Simon Wiesler, <b>Alexander Richard</b>, Pavel Golik, Ralf Schl&uumlter, Hermann Ney</div>
-            <div class="pubinfo">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2014</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_rasr.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">This paper describes the new release of RASR - the open source version of the well-proven speech recognition toolkit developed and used at RWTH Aachen University. The focus is put on the implementation of the NN module for training neural network acoustic models. We describe code design, configuration, and features of the NN module. The key feature is a high flexibility regarding the network topology, choice of activation functions, training criteria, and optimization algorithm, as well as a built-in support for efficient GPU computing. The evaluation of run-time performance and recognition accuracy is performed exemplary with a deep neural network as acoustic model in a hybrid NN/HMM system. The results show that RASR achieves a state-of-the-art performance on a real-world large vocabulary task, while offering a complete pipeline for building and applying large scale speech recognition systems.</div>
-            <div class="bibtex">@inproceedings{richard2014rasr,
-  title={RASR/NN: The RWTH neural network toolkit for speech recognition},
-  author={Wiesler, Simon and Richard, Alexander and Golik, Pavel and Schluter, Ralf and Ney, Hermann},
-  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
-  pages={3281--3285},
-  year={2014}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_critical_evaluation.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">A Critical Evaluation of Stochastic Algorithms for Convex Optimization</div>
-            <div class="pubauthors">Simon Wiesler, <b>Alexander Richard</b>, Ralf Schl&uumlter, Hermann Ney</div>
-            <div class="pubinfo">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2013</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_critical_evaluation.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Log-linear models find a wide range of applications in pattern recognition. The training of log-linear models is a convex optimization problem. In this work, we compare the performance of stochastic and batch optimization algorithms. Stochastic algorithms are fast on large data sets but can not be parallelized well. In our experiments on a broadcast conversations recognition task, stochastic methods yield competitive results after only a short training period, but when spending enough computational resources for parallelization, batch algorithms are competitive with stochastic algorithms. We obtained slight improvements by using a stochastic second order algorithm. Our best log-linear model outperforms the maximum likelihood trained Gaussian mixture model baseline although being ten times smaller.</div>
-            <div class="bibtex">@inproceedings{richard2013critical,
-  title={A critical evaluation of stochastic algorithms for convex optimization},
-  author={Wiesler, Simon and Richard, Alexander and Schl{\"u}ter, Ralf and Ney, Hermann},
-  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
-  pages={6955--6959},
-  year={2013}
-}</div>
-        </div>
-    </div>
-
-    <!-- publication -->
-    <div class="publication">
-        <div class="pubimg"><img src="publications/img/richard_feature_selection.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Feature Selection for Log-linear Acoustic Models</div>
-            <div class="pubauthors">Simon Wiesler, <b>Alexander Richard</b>, Yotaro Kubo, Ralf Schl&uumlter, Hermann Ney</div>
-            <div class="pubinfo">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2011</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/richard_feature_selection.pdf">pdf</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Log-linear acoustic models have been shown to be competitive with Gaussian mixture models in speech recognition. Their high training time can be reduced by feature selection. We compare a simple univariate feature selection algorithm with ReliefF - an efficient multivariate algorithm. An alternative to feature selection is l1-regularized training, which leads to sparse models. We observe that this gives no speedup when sparse features are used, hence feature selection methods are preferable. For dense features, l1-regularization can reduce training and recognition time. We generalize the well known Rprop algorithm for the optimization of l1-regularized functions. Experiments on the Wall Street Journal corpus showed that a large number of sparse features could be discarded without loss of performance. A strong regularization led to slight performance degradations, but can be useful on large tasks, where training the full model is not tractable.</div>
-            <div class="bibtex">@inproceedings{richard2011feature,
-  title={Feature selection for log-linear acoustic models},
-  author={Wiesler, Simon and Richard, Alexander and Kubo, Yotaro and Schl{\"u}ter, Ralf and Ney, Hermann},
-  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
-  pages={5324--5327},
-  year={2011}
-}</div>
-        </div>
-    </div>
-
 
 
     <!-- EDUCATION -->
@@ -679,56 +407,20 @@ We demonstrate that our approach outperforms several baselines and obtains state
         <!-- entry -->
         <div class="entry">
             <div class="title">
-                <p class="textbf">Oct 2019 - current</p>
-                <p>Research Scientist at Meta Reality Labs (formerly Facebook Reality Labs), Pittsburgh<p>
+                <p class="textbf">Sep 2020 - current</p>
+                <p>Ph. D. Student at Academy for Engineering and Technology, Fudan University, Shanghai<p>
             </div>
         <div class="body">
-            <p>Multimodal modeling for Social VR.</p>
+            <p>Research Topics: Multimodal Learning, Sentiment Analysis and Causal Inference</p>
         </div>
         <!-- entry -->
         <div class="entry">
             <div class="title">
-                <p class="textbf">Mar 2019 - Sep 2019</p>
-                <p>Scientist at Amazon Alexa, Aachen<p>
+                <p class="textbf">Sep 2016 - Jun 2020</p>
+                <p>Bachelor's Degree, Yunnan University<p>
             </div>
         <div class="body">
-            <p>Working on Alexa at Amazon in Aachen, Germany.</p>
-        </div>
-        <!-- entry -->
-        <div class="entry">
-            <div class="title">
-                <p class="textbf">Mar 2018 - Aug 2018</p>
-                <p>Research Intern at Facebook Reality Labs<p>
-            </div>
-        <div class="body">
-            <p>Research internship at Facebook Reality Labs in Pittsburgh, working on multi-modal modeling for social VR.</p>
-        </div>
-        <!-- entry -->
-        <div class="entry">
-            <div class="title">
-                <p class="textbf">Mar 2014 - Mar 2019</p>
-                <p>PhD Student, University of Bonn<p>
-            </div>
-        <div class="body">
-            <p>Researcher in the field of video analytics and action recognition.<br>Research focus on temporal action segmentation and action labeling for long, untrimmed videos containing multiple action instances.</p>
-        </div>
-        <!-- entry -->
-        <div class="entry">
-            <div class="title">
-                <p class="textbf">Oct 2011 - Feb 2014</p>
-                <p>Master's Degree, RWTH Aachen University<p>
-            </div>
-        <div class="body">
-            <p>Thesis: <i>Improved Optimization of Neural Networks</i><br>Implementation of a neural network module for the speech recognition software RASR; design, analysis, and evaluation of a novel optimization algorihm called <i>mean-normalized stochastic gradient descent (MN-SGD)</i></p>
-        </div>
-        <!-- entry -->
-        <div class="entry">
-            <div class="title">
-                <p class="textbf">Oct 2008 - Sep 2011</p>
-                <p>Bachelor's Degree, RWTH Aachen University<p>
-            </div>
-        <div class="body">
-            <p>Thesis: <i>Optimization of Log-linear Models and Online Learning</i><br>Analytical and empirical evaluation of various optimization methods for log-linear models.</p>
+            <p>Thesis: Mobile Robotic Fire Extinguishing System in a Tobacco Factory Warehouse Context.</p>
         </div>
     </div>
 
