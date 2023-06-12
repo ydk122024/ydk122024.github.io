@@ -21,7 +21,7 @@
         $(document).ready(function(){
             $(".trigger_abs").click(function(){ // trigger for abstract
                 $(this).nextAll(".abstract").slideToggle("fast");
-                $(this).children("a").toggleClass("closed open");V
+                $(this).children("a").toggleClass("closed open");
             });
             $(".trigger_bib").click(function(){ // trigger for bibtex
                 $(this).nextAll(".bibtex").slideToggle("fast");
@@ -59,38 +59,152 @@
 <div class="main">
     <br>
     <br>
-    I m a third-year Ph.D. student at Academy for Engineering and Technology of Fudan University. 
-    As a part of the Intelligent Perception and Autonomous Systems Laboratory, I am advised by Prof. <a href="http://faet.fudan.edu.cn/e4/71/c23902a255089/page.htm" style="color: brown;"> Lihua Zhang </a>.
-    Before that, I received my B.S. degree under joint training from the School of Information, Yunnan University, and the Chinese People's Armed Police Force (Optional Training Office), in 2020.
+    I am a third-year Ph.D. student at Academy for Engineering and Technology of Fudan University. 
+    As a part of the Intelligent Perception and Autonomous Systems Laboratory, I am advised by Prof. <a href="http://faet.fudan.edu.cn/e4/71/c23902a255089/page.htm" style="color: rgb(34, 113, 241);"> Lihua Zhang </a>.
+    <br>
+    <br>
+    Before that, I received my B.S. degree under joint training from the School of Information, Yunnan University, and the <span style="color: rgb(34, 113, 241);">Chinese People's Armed Police Force</span>, in 2020. 
     <!-- My research interests are <b>vision-based fine-grained action recognition</b> and <b>action quality assessment</b> in medical scenes.
     I have also explored many vision tasks such as multi-target tracking, network quantization, human-object interaction detection and 6D pose estimation of satellites. -->
     
+    <!-- PUBLICATIONS -->
+    <a name="Interests">
+        <div class="headline">Research Interests</div>
+        <ul>
+            <li>Multimodal Human Language Understanding</li>
+            <br>
+            <li>Sentiment Analysis / Emotion Recognition</li>
+            <br>
+            <li>Causal Inference/Unbiased Estimation</li>
+            <br>
+            <li>Multi-agent Collaborative Perception/V2X Communication in Autonomous Driving</li>
+            <br>
+            <li>AIGC/LLM</li>
+            </ul>
+
 
 
     <!-- PUBLICATIONS -->
     <a name="publications">
-    <div class="headline">Publications</div>
+    <div class="headline">Selected Publications</div>
 
     <!-- publication -->
     <div class="publication">
-        <div class="pubimg"><img src="publications/img/CAAI.png" class="thumbnail"></div>
+        <div class="pubimg"><img src="publications/img/CCIM.png" class="thumbnail"></div>
         <div class="pubtext">
-            <div class="pubtitle">Current Status and Prospects of Human-Machine Fusion Intelligence Research</div>
-            <div class="pubauthors">Lihua Zhang*, <b>Dingkang Yang</b>, Peng Zhai, Zhe Wang, Xiaoyang Kang, Chixiao Chen, Kai Cao</div>
-            <div class="pubinfo">Chinese Association for Artificial Intelligence (Chief Editor: Qionghai Dai)</div>
+            <div class="pubtitle">Context De-confounded Emotion Recognition</div>
+            <div class="pubauthors"><b>Dingkang Yang</b>, Zhaoyu Chen, Yuzheng Wang, Shunli Wang, Mingcheng Li, ..., Lihua Zhang*</div>
+            <div class="pubinfo">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR2023)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
-            <div class="pubbox"><a href="publications/pdf/CAAI.pdf">PDF</a></div>
+            <div class="pubbox"><a href="publications/pdf/CCIM.pdf">PDF</a></div>
+            <div class="pubbox"><a href=https://github.com/ydk122024/CCIM>Code</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">This paper introduces the research challenges of human-machine fusion intelligence 
-                in terms of human-machine cognitive differentiation, intentionality and formality, and ethical
-                 issues. Meanwhile, we discuss the state-of-the-art research and development of human-machine fusion intelligence 
-                 in key technologies such as machine intuition, information fusion, and situational awareness.
-                Finally, we present a novel architecture for human-machine fusion intelligence, which provides a common paradigm 
-                and suggestions for the future application and development of this technology in various fields.</div>
-            <div class="bibtex"> </div>
+            <div class="abstract">Context-Aware Emotion Recognition (CAER) is a crucial and challenging task 
+                that aims to perceive the emotional states of the target person with contextual information. 
+                Recent approaches invariably focus on designing sophisticated architectures or mechanisms 
+                to extract seemingly meaningful representations from subjects and contexts. However, a long-overlooked issue is that a context bias in existing datasets leads to a significantly unbalanced distribution of emotional states among different context scenarios. Concretely, the harmful bias is a confounder
+                that misleads existing models to learn spurious correlations
+                based on conventional likelihood estimation, significantly
+                limiting the models' performance. To tackle the issue, this
+                paper provides a causality-based perspective to disentangle the models from
+                 the impact of such bias, and formulate the causalities among variables in the CAER task via
+                a tailored causal graph. Then, we propose a Contextual
+                Causal Intervention Module (CCIM) based on the backdoor
+                adjustment to de-confound the confounder and exploit the
+                true causal effect for model training. CCIM is plug-in and
+                model-agnostic, which improves diverse state-of-the-art approaches by 
+                considerable margins. Extensive experiments
+                on three benchmark datasets demonstrate the effectiveness
+                of our CCIM and the significance of causal insight.</div>
+            <div class="bibtex"> @InProceedings{yang2023context,
+            author = {Yang, Dingkang and Chen, Zhaoyu and Wang, Yuzheng and Wang, Shunli and Li, Mingcheng and Liu, Siao and Zhao, Xiao and Huang, Shuai and Dong, Zhiyan and Zhai, Peng and Zhang, Lihua},
+            title = {Context De-Confounded Emotion Recognition},
+            booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+            month  = {June},
+            year = {2023},
+            pages = {19005-19015}
+            }
+            </div>
         </div>
     </div>
+
+    <!-- publication -->
+    <div class="publication">
+        <div class="pubimg"><img src="publications/img/KBS2023.png" class="thumbnail"></div>
+        <div class="pubtext">
+            <div class="pubtitle">Target and Source Modality Co-reinforcement for Emotion
+                Understanding from Asynchronous Multimodal Sequences</div>
+            <div class="pubauthors"><b>Dingkang Yang</b>, Yang Liu, Can Huang, ..., Peng Zhai*, Lihua Zhang*</div>
+            <div class="pubinfo">Knowledge-Based Systems</div>
+            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
+            <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
+            <div class="pubbox"><a href="publications/pdf/KBS2023.pdf">PDF</a></div>
+            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
+            <div class="abstract">Perceiving human emotions from a multimodal perspective has received significant 
+                attention in knowledge engineering communities. Due to the variable receiving frequency for sequences from various
+                modalities, multimodal streams usually have an inherent asynchronous challenge. Most previous
+                methods performed manual sequence alignment before multimodal fusion, which ignored long-range
+                dependencies among modalities and failed to learn reliable crossmodal element correlations. Inspired
+                by the human perception paradigm, we propose a target and source Modality Co-Reinforcement
+                (MCR) approach to achieve sufficient crossmodal interaction and fusion at different granularities.
+                Specifically, MCR introduces two types of target modality reinforcement units to reinforce the
+                multimodal representations jointly. These target units effectively enhance emotion-related knowledge
+                exchange in fine-grained interactions and capture the crossmodal elements that are emotionally
+                expressive in mixed-grained interactions. Moreover, a source modality update module is presented to
+                provide meaningful features for the crossmodal fusion of target modalities. Eventually, the multimodal
+                representations are progressively reinforced and improved via the above components. Comprehensive
+                experiments are conducted on three multimodal emotion understanding benchmarks. Quantitative
+                results show that MCR significantly outperforms the previous state-of-the-art methods in both wordaligned 
+                and unaligned settings. Additionally, qualitative analysis and visualization fully demonstrate
+                the superiority of the proposed modules.</div>
+            <div class="bibtex"> @article{yang2023target,
+            title={Target and source modality co-reinforcement for emotion understanding from asynchronous multimodal sequences},
+            author={Yang, Dingkang and Liu, Yang and Huang, Can and Li, Mingcheng and Zhao, Xiao and Wang, Yuzheng and Yang, Kun and Wang, Yan and Zhai, Peng and Zhang, Lihua},
+            journal={Knowledge-Based Systems},
+            volume={265},
+            pages={110370},
+            year={2023},
+            publisher={Elsevier}
+            }
+            </div>
+        </div>
+    </div>
+
+    <!-- publication -->
+    <div class="publication">
+        <div class="pubimg"><img src="publications/img/Avatar.png" class="thumbnail"></div>
+        <div class="pubtext">
+            <div class="pubtitle">Human 3D Avatar Modeling with Implicit Neural Representation:
+                A Brief Survey</div>
+            <div class="pubauthors">Mingyang Sun, <b>Dingkang Yang</b>, Dongliang Kou, Yang Jiang, Weihua Shan, Zhe Yan, Lihua Zhang*</div>
+            <div class="pubinfo">A Brief Survey 2023</div>
+            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
+            <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
+            <div class="pubbox"><a href="publications/pdf/Avatar.pdf">PDF</a></div>
+            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
+            <div class="abstract">A human 3D avatar is one of the important elements in
+                the metaverse, and the modeling effect directly affects people's visual experience. However, the human body has a
+                complex topology and diverse details, so it is often expensive, time-consuming, and laborious to build a satisfactory
+                model. Recent studies have proposed a novel method, implicit neural representation, which is a continuous representation method and can describe objects with arbitrary
+                topology at arbitrary resolution. Researchers have applied
+                implicit neural representation to human 3D avatar modeling and obtained more excellent results than traditional
+                methods. This paper comprehensively reviews the application of implicit neural representation in human body modeling. First, we introduce three implicit representations of
+                occupancy field, SDF, and NeRF, and make a classification
+                of the literature investigated in this paper. Then the application of implicit modeling methods in the body, hand,
+                and head are compared and analyzed respectively. Finally,
+                we point out the shortcomings of current work and provide
+                available suggestions for researchers.</div>
+            <div class="bibtex">@article{sun2023human,
+            title={Human 3D Avatar Modeling with Implicit Neural Representation: A Brief Survey},
+            author={Sun, Mingyang and Yang, Dingkang and Kou, Dongliang and Jiang, Yang and Shan, Weihua and Yan, Zhe and Zhang, Lihua},
+            journal={arXiv preprint arXiv:2306.03576},
+            year={2023}
+            }
+            </div>
+        </div>
+    </div>
+
 
     <!-- publication -->
     <div class="publication">
@@ -116,10 +230,19 @@
                 Furthermore, we present a cross-modal attention fusion module to learn adaptive weights for obtaining effective multimodal representations. The final representation is used for different downstream tasks.
                 Experimental results show that the FDMER outperforms the state-of-the-art methods on two multimodal emotion recognition benchmarks. 
                 Moreover, we further verify the effectiveness of our model via experiments on the multimodal humor detection task.</div>
-            <div class="bibtex"> </div>
+            <div class="bibtex"> @inproceedings{yang2022disentangled,
+            author = {Yang, Dingkang and Huang, Shuai and Kuang, Haopeng and Du, Yangtao and Zhang, Lihua},
+            title = {Disentangled Representation Learning for Multimodal Emotion Recognition},
+            booktitle={Proceedings of the 30th ACM International Conference on Multimedia (ACM MM)},
+            year = {2022},
+            pages = {1642-1651},
+            numpages = {10}
+            }
+            </div>
         </div>
     </div>
 
+    
    <!-- publication -->
    <div class="publication">
         <div class="pubimg"><img src="publications/img/MFSA.png" class="thumbnail"></div>
@@ -130,7 +253,7 @@
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
             <div class="pubbox"><a href="publications/pdf/MFSA.pdf">PDF</a></div>
-            <div class="pubbox"><a href="publications/pdf/MFSA_Supp.pdf">Supp</a></div>
+            <!-- <div class="pubbox"><a href="publications/pdf/MFSA_Supp.pdf">Supp</a></div> -->
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
             <div class="abstract">Understanding human behaviors and intents from videos is a challenging task. Video flows usually involve time-series data from different modalities, such as natural language, facial gestures, and acoustic information.
                 Due to the variable receiving frequency for sequences from each modality, the collected multimodal streams are usually unaligned.
@@ -141,7 +264,15 @@
                 In this case, a double-discriminator strategy is presented to ensure the production of distinct representations in an adversarial manner.
                 Eventually, the modality-specific and -agnostic multimodal representations are used together for downstream tasks.
                 Comprehensive experiments on three multimodal datasets clearly demonstrate the superiority of our approach.</div>
-            <div class="bibtex"> </div>
+            <div class="bibtex">@inproceedings{yang2022learning,
+            author = {Yang, Dingkang and Kuang, Haopeng and Huang, Shuai and Zhang, Lihua},
+            title = {Learning Modality-Specific and -Agnostic Representations for Asynchronous Multimodal Language Sequences},
+            booktitle={Proceedings of the 30th ACM International Conference on Multimedia (ACM MM)},
+            year = {2022},
+            pages = {1708-1717},
+            numpages = {10}
+            } 
+            </div>
         </div>
     </div>
 
@@ -154,7 +285,7 @@
             <div class="pubinfo">European Conference on Computer Vision (ECCV 2022)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
-            <div class="pubbox"><a href="publications/pdf/ECCV.pdf">PDF</a></div>
+            <div class="pubbox"><a href="publications/pdf/ECCV2022.pdf">PDF</a></div>
             <div class="pubbox"><a href="publications/pdf/ECCV_Supp.pdf">Supp</a></div>
             <div class="pubbox"><a href=https://heco2022.github.io>Project</a></div>
             <div class="pubbox"><a href=https://drive.google.com/drive/folders/1js1UoaAeagrHZ5eizInw5ZaWLJurKW-D>Data</a></div>
@@ -175,7 +306,21 @@
                 the existing methods on the HECO, and our approach obtains a higher
                 classification average precision of 50.65% and a lower regression mean
                 error rate of 0.7. The project is available at <a href="https://heco2022.github.io/" style="color: blue;"> https://heco2022.github.io/ </a></div>
-            <div class="bibtex"> </div>
+            <div class="bibtex">@inproceedings{yang2022emotion,
+            author = {Dingkang Yang and
+            Shuai Huang and
+            Shunli Wang and
+            Yang Liu and
+            Peng Zhai and
+            Liuzhen Su and
+            Mingcheng Li and
+            Lihua Zhang},
+            title = {Emotion Recognition for Multiple Context Awareness},
+            booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+            volume = {13697},
+            pages = {144--162},
+            year  = {2022}
+            } </div>
         </div>
     </div>
 
@@ -184,7 +329,7 @@
         <div class="pubimg"><img src="publications/img/SPL.png" class="thumbnail"></div>
         <div class="pubtext">
             <div class="pubtitle">Contextual and Cross-modal Interaction for Multi-modal Speech Emotion Recognition</div>
-            <div class="pubauthors"><b>Dingkang Yang</b>, Shuai Huang, Yang Liu, Xiao Zhao, Siao Liu, Lihua Zhang*</div>
+            <div class="pubauthors"><b>Dingkang Yang</b>, Shuai Huang, Yang Liu, Lihua Zhang*</div>
             <div class="pubinfo">IEEE SIGNAL PROCESSING LETTERS (SPL)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <div class="pubbox"><a href="publications/pdf/SPL.pdf">PDF</a></div>
@@ -206,7 +351,14 @@
                 fused features with graph convolutional network. Experimental
                 results on the IEMOCAP and MELD datasets show that our
                 method outperforms current state-of-the-art methods.</div>
-            <div class="bibtex"> </div>
+            <div class="bibtex">@article{yang2022contextual,
+            author={Yang, Dingkang and Huang, Shuai and Liu, Yang and Zhang, Lihua},
+            journal={IEEE Signal Processing Letters},
+            title={Contextual and Cross-Modal Interaction for Multi-Modal Speech Emotion Recognition},
+            year={2022},
+            volume={29},
+            pages={2093-2097},
+            }</div>
         </div>
     </div>
 
@@ -218,7 +370,7 @@
         <div class="pubtext">
             <div class="pubtitle">CA-SpaceNet: Counterfactual Analysis for 6D Pose Estimation in Space</div>
             <div class="pubauthors">Shunli Wang, Shuaibing Wang, Bo Jiao, <b>Dingkang Yang</b>, Liuzhen Su, Peng Zhai, Chixiao Chen, Lihua Zhang*</div>
-            <div class="pubinfo">2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022)</div>
+            <div class="pubinfo">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <div class="pubbox"><a href="publications/pdf/slwang_CA-SpaceNet.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
@@ -230,74 +382,18 @@
                 we also carry out lowbit-width quantization for CA-SpaceNet and deploy part of the framework to a Processing-In-Memory (PIM) accelerator on FPGA. 
                 Qualitative and quantitative results demonstrate the effectiveness and efficiency of our proposed method. To our best knowledge, this paper applies 
                 causal inference and network quantization to the 6D pose estimation of space-borne targets for the first time. 
-                The code is available at <a href="https://github.com/Shunli-Wang/CA-SpaceNet" style="color: blue;"> https://github.com/Shunli-Wang/CA-SpaceNet </a> .</div>
-            <div class="bibtex"> </div>
+                The code is available at <a href="https://github.com/Shunli-Wang/CA-SpaceNet" style="color: blue;"> https://github.com/Shunli-Wang/CA-SpaceNet </a>.</div>
+            <div class="bibtex">@inproceedings{wang2022spacenet,
+            title={CA-SpaceNet: Counterfactual Analysis for 6D Pose Estimation in Space},
+            author={Wang, Shunli and Wang, Shuaibing and Jiao, Bo and Yang, Dingkang and Su, Liuzhen and Zhai, Peng and Chen, Chixiao and Zhang, Lihua},
+            booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+            pages={10627--10634},
+            year={2022}
+            } </div>
         </div>
     </div>
 
-    <!-- publication -->
-    <!-- <div class="publication">
-        <div class="pubimg"><img src="publications/img/AIAM.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">IVSA : Facial Expression Recognition Method with Salient Attention</div>
-            <div class="pubauthors">Shuai Huang, <b>Dingkang Yang</b>, Chuyi Zhong, Lihua Zhang*</div>
-            <div class="pubinfo">FCPAE Europe Forum & 4th International Conference on Artificial Intelligence and Advanced Manufacturing (AIAM2022)</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/AIAM.pdf">PDF</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">In recent years, facial expressions have become a
-                hot topic in computer vision research. With the development of
-                artificial intelligence technology, the performance of facial
-                expression recognition have been greatly improved. To further
-                improve the ability of extracting significant features and
-                enhancing the robustness of the model, we present a novel
-                facial expression recognition method based on convolutional
-                neural network and attention mechanism. Concretely, we add
-                the L2 norm features in CBAM and re-scale the channel
-                weights. Salient attention block is used to suppress the
-                insignificant features and enhance the weight of salient
-                features, which improves the performance and robustness of
-                the model. Finally, IVSA achieves the highest single-network
-                accuracy of 72.44% on testing data without using extra
-                training data, which is improved by 1.14% compared with the
-                previous methods. Extensive experiments prove the
-                effectiveness of the model and framework proposed.</div>
-            <div class="bibtex"> </div>
-        </div>
-    </div> -->
 
-
-   <!-- publication -->
-   <div class="publication">
-        <div class="pubimg"><img src="publications/img/VAD.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">Learning Appearance-motion Normality for Video Anomaly Detection</div>
-            <div class="pubauthors">Yang Liu, Jing Liu, Mengyang Zhao, <b>Dingkang Yang</b>, ...</div>
-            <div class="pubinfo">IEEE International Conference on Multimedia and Expo (ICME 2022)</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/VAD.pdf">PDF</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">Video anomaly detection is a challenging task in the computer vision community. Most single task-based methods do
-                not consider the independence of unique spatial and temporal
-                patterns, while two-stream structures lack the exploration of
-                the correlations. In this paper, we propose spatial-temporal
-                memories augmented two-stream auto-encoder framework,
-                which learns the appearance normality and motion normality independently and explores the correlations via adversarial learning. Specifically, we first design two proxy tasks to
-                train the two-stream structure to extract appearance and motion features in isolation. Then, the prototypical features are
-                recorded in the corresponding spatial and temporal memory
-                pools. Finally, the encoding-decoding network performs adversarial learning with the discriminator to explore the correlations between spatial and temporal patterns. Experimental
-                results show that our framework outperforms the state-of-theart methods, achieving AUCs of 98.1% and 89.8% on UCSD
-                Ped2 and CUHK Avenue datasets.</div>
-            <div class="bibtex">@inproceedings{liu2022learning,
-                title={Learning Appearance-Motion Normality for Video Anomaly Detection},
-                author={Liu, Yang and Liu, Jing and Zhao, Mengyang and Yang, Dingkang and Zhu, Xiaoguang and Song, Liang},
-                booktitle={2022 IEEE International Conference on Multimedia and Expo (ICME)},
-                pages={1--6},
-                year={2022},
-                organization={IEEE Computer Society}
-              } </div>
-        </div>
-    </div>
 
 
 
@@ -311,7 +407,7 @@
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <div class="pubbox"><a href="publications/pdf/slwang_TSA-Net.pdf">PDF</a></div>
             <div class="pubbox"><a href="publications/pdf/slwang_TSA-Net_supp.pdf">Supp</a></div>
-            <div class="pubbox"><a href=https://github.com/Shunli-Wang/TSA-Net>Project</a></div>
+            <div class="pubbox"><a href=https://github.com/Shunli-Wang/TSA-Net>Code</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
             <div class="abstract">In recent years, assessing action quality from videos has attracted growing attention in computer vision community and human-computer interaction. 
                 Most existing approaches usually tackle this problem by directly migrating the model from action recognition tasks, which ignores the intrinsic differences within the 
@@ -323,13 +419,13 @@
                 Our TSA-Net achieves the Spearman's Rank Correlation of 0.8476 and 0.9393 on AQA-7 and MTL-AQA, respectively, which are the new state-of-the-art results. The results on FR-FS also 
                 verify the effectiveness of the TSA-Net. The code and FR-FS dataset are publicly available at <a href="https://github.com/Shunli-Wang/TSA-Net" style="color: blue;"> https://github.com/Shunli-Wang/TSA-Net </a>.</div>
             <div class="bibtex"> @inproceedings{TSA-Net,
-                title={TSA-Net: Tube Self-Attention Network for Action Quality Assessment},
-                author={Wang, Shunli and Yang, Dingkang and Zhai, Peng and Chen, Chixiao and Zhang, Lihua},
-                booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
-                year={2021},
-                pages={4902–4910},
-                numpages={9}
-              }</div>
+            title={TSA-Net: Tube Self-Attention Network for Action Quality Assessment},
+            author={Wang, Shunli and Yang, Dingkang and Zhai, Peng and Chen, Chixiao and Zhang, Lihua},
+            booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
+            year={2021},
+            pages={4902-4910},
+            numpages={9}
+            }</div>
         </div>
     </div>
 
@@ -351,62 +447,14 @@
                 definition and challenges of human action quality assessment. Then we present the existing datasets and evaluation metrics. In addition, we summarized the methods 
                 of sports and medical care according to the model categories and publishing institutions according to the characteristics of the two fields. At the end, combined 
                 with recent work, the promising development direction in action quality assessment is discussed.</div>
-            <div class="bibtex"> @inproceedings{AQA_Survey,
-                title={A Survey of Video-based Action Quality Assessment}, 
+            <div class="bibtex"> @inproceedings{wang2021survey,
+                title={A Survey of Video-based Action Quality Assessment},
                 author={Wang, Shunli and Yang, Dingkang and Zhai, Peng and Yu, Qing and Suo, Tao and Sun, Zhan and Li, Ka and Zhang, Lihua},
-                booktitle={2021 International Conference on Networking Systems of AI (INSAI)}, 
-                year={2021},
-                volume={},
-                number={},
-                pages={1-9},
-                doi={10.1109/INSAI54028.2021.00029}
-              }</div>
-        </div>
-    </div>
-
-   <!-- publication -->
-   <div class="publication">
-        <div class="pubimg"><img src="publications/img/MAPP.png" class="thumbnail"></div>
-        <div class="pubtext">
-            <div class="pubtitle">An Improved Ant Colony Optimization Algorithm for Multi-Agent Path Planning</div>
-            <div class="pubauthors">Shuai Huang, <b>Dingkang Yang</b>, Chuyi Zhong, Shichao Yan, Lihua Zhang*</div>
-            <div class="pubinfo">International Conference on Networking Systems of AI (INSAI 2021)</div>
-            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/MAPP.pdf">PDF</a></div>
-            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
-            <div class="abstract">In recent years, Ant Colony Optimization
-                algorithm has become one of the most widely used heuristic
-                algorithms and has been apply to solve different types of path
-                planning problems. However, there still are some problems in
-                Multi-Agent Path Finding, such as low convergence efficiency,
-                easy to fall into local optimum and vertex conflict. In this
-                paper, we proposed an Improved Ant Colony Optimization
-                algorithm based on parameter optimization and vertex conflict
-                resolution. First of all, we initialize the distribution of
-                pheromones to reduce the blindness of the algorithm in the
-                early stage. Secondly, we introduce an adaptive pheromone
-                intensity and pheromone reduction factor to avoid the
-                algorithm falling into local optimum. On this basis, the
-                algorithmÿs global search ability and convergence speed are
-                improved by dynamic modification of the evaporation factor
-                and heuristic function. In addition, the strategy of dynamically
-                modifying the influence factor and heuristic function improves
-                the global search ability and convergence speed of the
-                algorithm. To solve vertex conflict in MAPF, we use the design
-                conflict prediction and resolution strategy to effectively avoid
-                vertex conflict and improve the reliability of the multi-agent
-                system. Simulation experiments verify the effectiveness and
-                adaptability of IACO under different complexity environments,
-                and prove that IACO has good convergence speed and path
-                global optimization ability.</div>
-            <div class="bibtex"> @inproceedings{huang2021improved,
-                title={An Improved Ant Colony Optimization Algorithm for Multi-Agent Path Planning},
-                author={Huang, Shuai and Yang, Dingkang and Zhong, Chuyi and Yan, Shichao and Zhang, Lihua},
                 booktitle={2021 International Conference on Networking Systems of AI (INSAI)},
-                pages={95--100},
-                year={2021},
-                organization={IEEE}
-              }</div>
+                pages={1--9},
+                year={2021}
+              }
+              </div>
         </div>
     </div>
 
@@ -417,7 +465,7 @@
         <div class="pubtext">
             <div class="pubtitle">Learning Associative Representation For Facial Expression Recognition</div>
             <div class="pubauthors">Yangtao Du, <b>Dingkang Yang</b>, Peng Zhai, Mingcheng Li, Lihua Zhang*</div>
-            <div class="pubinfo">2021 IEEE International Conference on Image Processing (ICIP2021)</div>
+            <div class="pubinfo">IEEE International Conference on Image Processing (ICIP2021)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <div class="pubbox"><a href="publications/pdf/ICIP.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
@@ -441,13 +489,12 @@
                 and improve by 3.92% over SOTA on synthetic wrong
                 labeling datasets.</div>
             <div class="bibtex"> @inproceedings{du2021learning,
-                title={Learning Associative Representation For Facial Expression Recognition},
-                author={Du, Yangtao and Yang, Dingkang and Zhai, Peng and Li, Mingchen and Zhang, Lihua},
-                booktitle={2021 IEEE International Conference on Image Processing (ICIP)},
-                pages={889--893},
-                year={2021},
-                organization={IEEE}
-              }</div>
+            title={Learning Associative Representation For Facial Expression Recognition},
+            author={Du, Yangtao and Yang, Dingkang and Zhai, Peng and Li, Mingchen and Zhang, Lihua},
+            booktitle={2021 IEEE International Conference on Image Processing (ICIP)},
+            pages={889-893},
+            year={2021}
+            }</div>
         </div>
     </div>
 
@@ -570,7 +617,7 @@
                 <p>Ph. D. Student at Academy for Engineering and Technology, Fudan University, Shanghai<p>
             </div>
         <div class="body">
-            <p>Research Topics: Multimodal Learning, Sentiment Analysis and Causal Inference</p>
+            <p>Research Topics: Multimodal Learning, Sentiment Analysis, Autonomous Driving, and Causal Inference.</p>
         </div>
         <!-- entry -->
         <div class="entry">
