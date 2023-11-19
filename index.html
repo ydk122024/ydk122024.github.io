@@ -47,7 +47,7 @@
         </div>
         <table>
             <tr>
-                <th style="width: 50%; text-align: left"><img src="img/email.png" class="icon"> dkyang20[at]fudan.edu.cn</th>
+                <th style="width: 50%; text-align: left"><img src="img/email.png" class="icon"> dkyang20-[at]-fudan.edu.cn</th>
                 <th style="width: 50%; text-align: center"><a href="https://scholar.google.com/citations?user=jvlDhkcAAAAJ"><img src="img/scholar.png" class="icon"> Google Scholar</a></th>
                 <!-- <th style="width: 33%; text-align: right"><a href="https://twitter.com/AlexRichardCS"><img src="img/twitter.png" class="icon"> Twitter</a></th> -->
             </tr>
@@ -60,7 +60,7 @@
     <br>
     <br>
     I am a third-year Ph.D. student at Academy for Engineering and Technology of Fudan University. 
-    As a part of the Intelligent Perception and Autonomous Systems Laboratory, I am advised by Prof. <a href="http://faet.fudan.edu.cn/e4/71/c23902a255089/page.htm" style="color: rgb(34, 113, 241);"> Lihua Zhang </a>.
+    As a part of the Cognition and Intelligent Technology Laboratory, I am advised by Prof. <a href="http://faet.fudan.edu.cn/e4/71/c23902a255089/page.htm" style="color: rgb(34, 113, 241);"> Lihua Zhang </a>.
     <br>
     <br>
     Before that, I received my B.S. degree under joint training from the School of Information, Yunnan University, and the <span style="color: rgb(34, 113, 241);">Chinese People's Armed Police Force</span>, in 2020. 
@@ -71,13 +71,13 @@
     <a name="Interests">
         <div class="headline">Research Interests</div>
         <ul>
-            <li>Multimodal Human Language Understanding</li>
+            <li>Multimodal Learning</li>
             <br>
             <li>Sentiment Analysis / Emotion Recognition</li>
             <br>
             <li>Causal Inference/Unbiased Estimation</li>
             <br>
-            <li>Multi-agent Collaborative Perception/V2X Communication in Autonomous Driving</li>
+            <li>Driving Perception/Multi-agent Collaborative Perception in Autonomous Driving</li>
             <br>
             <li>AIGC/LLM</li>
             </ul>
@@ -90,14 +90,53 @@
 
 
     <!-- publication -->
-    <!-- <div class="publication">
+    <div class="publication">
+        <div class="pubimg"><img src="publications/img/NIPS.png" class="thumbnail"></div>
+        <div class="pubtext">
+            <div class="pubtitle">How2comm: Communication-Efficient and Collaboration-Pragmatic Multi-Agent Perception</div>
+            <div class="pubauthors"> <u><b>Dingkang Yang</b></u> <b>(Co-first author)</b>, <u>Kun Yang</u>, Yuzheng Wang, ..., Lihua Zhang*</div>
+            <div class="pubinfo">Neural Information Processing Systems (NeurIPS 2023)</div>
+            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
+            <div class="pubbox"><a href="https://openreview.net/pdf?id=Dbaxm9ujq6">PDF</a></div>
+            <div class="pubbox"><a href=https://github.com/ydk122024/How2comm>Project</a></div>
+            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
+            <div class="abstract">Multi-agent collaborative perception has recently received widespread attention as
+                an emerging application in driving scenarios. Despite the advancements in previous
+                efforts, challenges remain due to various dilemmas in the perception procedure,
+                including communication redundancy, transmission delay, and collaboration heterogeneity. 
+                To tackle these issues, we propose How2comm, a collaborative perception
+                framework that seeks a trade-off between perception performance and communication bandwidth. Our novelties lie in three aspects. First, 
+                we devise a mutual
+                information-aware communication mechanism to maximally sustain the informative features shared by collaborators. 
+                The spatial-channel filtering is adopted to
+                perform effective feature sparsification for efficient communication. Second, we
+                present a flow-guided delay compensation strategy to predict future characteristics
+                from collaborators and eliminate feature misalignment due to temporal asynchrony.
+                Ultimately, a pragmatic collaboration transformer is introduced to integrate holistic
+                spatial semantics and temporal context clues among agents. Our framework is
+                thoroughly evaluated on several LiDAR-based collaborative detection datasets in
+                real-world and simulated scenarios. Comprehensive experiments demonstrate the
+                superiority of How2comm and the effectiveness of all its vital components. The
+                code will be released at https://github.com/ydk122024/How2comm.</div>
+            <div class="bibtex"> @inproceedings{yang2023how2comm,
+                title={How2comm: Communication-Efficient and Collaboration-Pragmatic Multi-Agent Perception},
+                author={Yang, Dingkang and Yang, Kun and Wang, Yuzheng and Liu, Jing and Xu, Zhi and Yin, Rongbin and Zhai, Peng and Zhang, Lihua},
+                booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+                year={2023}
+              }
+            </div>
+        </div>
+    </div>
+
+    <!-- publication -->
+    <div class="publication">
         <div class="pubimg"><img src="publications/img/What2comm.png" class="thumbnail"></div>
         <div class="pubtext">
             <div class="pubtitle">What2comm: Towards Communication-efficient Collaborative Perception via Feature Decoupling</div>
-            <div class="pubauthors"><u>Kun Yang</u>, <u><b>Dingkang Yang</b></u> <b>(co-first author)</b>, Jingyu Zhang, Hanqi Wang, ...</div>
+            <div class="pubauthors"><u>Kun Yang</u>, <u><b>Dingkang Yang</b></u> <b>(Co-first author)</b>, Jingyu Zhang, Hanqi Wang, ...</div>
             <div class="pubinfo">ACM International Conference on Multimedia (ACM-MM 2023)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
-            <div class="pubbox"><a href="publications/pdf/What2comm.pdf">PDF</a></div>
+            <div class="pubbox"><a href="https://dl.acm.org/doi/pdf/10.1145/3581783.3611699">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
             <div class="abstract">Multi-agent collaborative perception has received increasing attention recently as an emerging application
                  in driving scenarios. Despite advancements in previous approaches, challenges remain due to redundant communication patterns
@@ -108,10 +147,49 @@
                       is introduced to integrate complementary information from collaborators and temporal ego cues, leading to a robust collaboration procedure against transmission delay and localization errors.
                 Ultimately, we propose a common-aware fusion strategy to refine final representations with informative common features.
                 Comprehensive experiments in real-world and simulated scenarios demonstrate the effectiveness of What2comm.</div>
-            <div class="bibtex"> Coming soon~
+            <div class="bibtex"> @inproceedings{yang2023what2comm,
+                author = {Yang, Kun and Yang, Dingkang and Zhang, Jingyu and Wang, Hanqi and Sun, Peng and Song, Liang},
+                title = {What2comm: Towards Communication-Efficient Collaborative Perception via Feature Decoupling},
+                booktitle={Proceedings of the 31th ACM International Conference on Multimedia (ACM MM)},
+                year = {2023},
+                pages = {7686-7695},
+                numpages = {10}
+                }
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- publication -->
+    <div class="publication">
+        <div class="pubimg"><img src="publications/img/SPL_MSA.png" class="thumbnail"></div>
+        <div class="pubtext">
+            <div class="pubtitle">Towards Robust Multimodal Sentiment Analysis under Uncertain Signal Missing</div>
+            <div class="pubauthors">Mingcheng Liu, <b>Dingkang Yang</b>, Lihua Zhang*</div>
+            <div class="pubinfo">IEEE Signal Processing Letters (SPL)</div>
+            <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
+            <div class="pubbox"><a href="https://ieeexplore.ieee.org/abstract/document/10284999">PDF</a></div>
+            <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
+            <div class="abstract">Multimodal Sentiment Analysis (MSA) has attracted widespread research attention recently. Most MSA studies are based on the assumption of 
+                signal completeness. However, many inevitable factors in real applications lead to uncertain signal missing, causing significant 
+                degradation of model performance. To this end, we propose a Robust multimodal Missing Signal Framework (RMSF) to handle 
+                the problem of uncertain signal missing for MSA tasks and can be generalized to other multimodal patterns. Specifically, a hierarchical 
+                crossmodal interaction module in RMSF exploits potential complementary semantics among modalities via coarse- and fine-grained crossmodal attention. 
+                Furthermore, we design an adaptive feature refinement module to enhance the beneficial semantics of modalities and filter redundant features. Finally, 
+                we propose a knowledge-integrated self-distillation module that enables dynamic knowledge integration and bidirectional knowledge transfer within a single 
+                network to precisely reconstruct missing semantics. Comprehensive experiments are conducted on two datasets, indicating that RMSF significantly improves MSA 
+                performance under both uncertain missing-signal and complete-signal cases.</div>
+            <div class="bibtex"> @article{li2023towards,
+                title={Towards Robust Multimodal Sentiment Analysis under Uncertain Signal Missing},
+                author={Li, Mingcheng and Yang, Dingkang and Zhang, Lihua},
+                journal={IEEE Signal Processing Letters},
+                year={2023},
+                volume={30},
+                pages={1497-1501}
+              }
+            </div>
+        </div>
+    </div>
+
 
     <!-- publication -->
     <div class="publication">
@@ -122,7 +200,7 @@
             <div class="pubinfo">IEEE/CVF International Conference on Computer Vision (ICCV 2023)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
-            <div class="pubbox"><a href="https://arxiv.org/pdf/2307.13933.pdf">PDF</a></div>
+            <div class="pubbox"><a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Yang_AIDE_A_Vision-Driven_Multi-View_Multi-Modal_Multi-Tasking_Dataset_for_Assistive_Driving_ICCV_2023_paper.pdf">PDF</a></div>
             <div class="pubbox"><a href=https://github.com/ydk122024/AIDE>Project</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
             <div class="abstract">Driver distraction has become a significant cause of severe traffic accidents over the past decade.
@@ -149,11 +227,11 @@
         <div class="pubimg"><img src="publications/img/SCOPE.png" class="thumbnail"></div>
         <div class="pubtext">
             <div class="pubtitle">Spatio-Temporal Domain Awareness for Multi-Agent Collaborative Perception</div>
-            <div class="pubauthors"><u>Kun Yang</u>, <u><b>Dingkang Yang</b></u> <b>(co-first author)</b>, Jingyu Zhang, Mingcheng Li, ...</div>
+            <div class="pubauthors"><u>Kun Yang</u>, <u><b>Dingkang Yang</b></u> <b>(Co-first author)</b>, Jingyu Zhang, Mingcheng Li, ...</div>
             <div class="pubinfo">IEEE/CVF International Conference on Computer Vision (ICCV 2023)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
-            <div class="pubbox"><a href="https://arxiv.org/pdf/2307.13929.pdf">PDF</a></div>
+            <div class="pubbox"><a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Yang_Spatio-Temporal_Domain_Awareness_for_Multi-Agent_Collaborative_Perception_ICCV_2023_paper.pdf">PDF</a></div>
             <div class="pubbox"><a href=https://ydk122024.github.io/SCOPE/>Project</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
             <div class="abstract">Multi-agent collaborative perception as a potential application for vehicle-to-everything communication could significantly improve the perception
@@ -183,7 +261,7 @@
             <div class="pubinfo">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2023)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
-            <div class="pubbox"><a href="publications/pdf/CCIM.pdf">PDF</a></div>
+            <div class="pubbox"><a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Yang_Context_De-Confounded_Emotion_Recognition_CVPR_2023_paper.pdf">PDF</a></div>
             <div class="pubbox"><a href=https://ydk122024.github.io/ccim23/>Project</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
             <div class="abstract">Context-Aware Emotion Recognition (CAER) is a crucial and challenging task 
@@ -367,7 +445,7 @@
         <div class="pubimg"><img src="publications/img/ECCV.png" class="thumbnail"></div>
         <div class="pubtext">
             <div class="pubtitle">Emotion Recognition for Multiple Context Awareness</div>
-            <div class="pubauthors"> <u><b>Dingkang Yang</b></u> <b>(co-first author)</b>, <u>Shuai Huang</u>, Shunli Wang, ..., Lihua Zhang*</div>
+            <div class="pubauthors"> <u><b>Dingkang Yang</b></u> <b>(Co-first author)</b>, <u>Shuai Huang</u>, Shunli Wang, ..., Lihua Zhang*</div>
             <div class="pubinfo">European Conference on Computer Vision (ECCV 2022)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <!-- <div class="pubbox"><a href="https://github.com/facebookresearch/multiface">Dataset</a></div> -->
@@ -416,7 +494,7 @@
         <div class="pubtext">
             <div class="pubtitle">Contextual and Cross-modal Interaction for Multi-modal Speech Emotion Recognition</div>
             <div class="pubauthors"><b>Dingkang Yang</b>, Shuai Huang, Yang Liu, Lihua Zhang*</div>
-            <div class="pubinfo">IEEE SIGNAL PROCESSING LETTERS (SPL)</div>
+            <div class="pubinfo">IEEE Signal Processing Letters (SPL)</div>
             <div class="pubbox trigger_abs"><a href="javascript:void(0)">Abstract</a></div>
             <div class="pubbox"><a href="publications/pdf/SPL.pdf">PDF</a></div>
             <div class="pubbox trigger_bib"><a href="javascript:void(0)">BibTex</a></div>
