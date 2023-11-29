@@ -1,0 +1,19 @@
+{
+    "name": "",
+    "short_name": "",
+    "icons": [
+       {
+          "src": "/ydk122024.github.io/ydk - Homepage_files/dicken.jpg",
+          "sizes": "192x192",
+          "type": "image/jpg"
+       },
+       {
+        "src": "ydk122024.github.io/ydk - Homepage_files/dicken.jpg",
+        "sizes": "512x512",
+        "type": "image/jpg"
+        }
+    ],
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "display": "standalone"
+ }
